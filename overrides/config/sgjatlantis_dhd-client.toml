@@ -1,0 +1,4 @@
+[debugger]
+	#Enables the F8 center-triangle position editor in the Atlantis DHD GUI.
+	#Intended only for GUI development; leave false for normal gameplay.
+	enableF8Editor = false

@@ -1,0 +1,7 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"legendarymonuments:gs_ball"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:oak_leaves"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"rctmod:trainer_spawner"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"cobblemore_lib:beast_ball_lid"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

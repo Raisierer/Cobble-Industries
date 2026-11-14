@@ -1,0 +1,93 @@
+[Debug]
+	#Debug mode: 
+	debug = false
+
+["Daycare Settings"]
+	#Breeding Difficulty.
+	#Allowed Values: CLASSIC, MODERN, EASY
+	breedingMode = "MODERN"
+	#Whether withdrawing Pokemon from the Daycare costs currency/items.
+	enableDaycareCost = true
+	daycareCurrencyItem = "numismatics:bevel"
+	# Default: 100
+	# Range: 50 ~ 3000
+	eggCycleThreshold = 100
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	eggGenerationChance = 0.5
+	# Default: 10
+	# Range: 0 ~ 1000
+	xpPerTick = 10
+	# Default: 4
+	# Range: 1 ~ 252
+	evsPerCycle = 4
+
+["Trainer Academy Settings"]
+	#The item registry name that must be used as a Bottle Cap for Hyper Training.
+	bottleCapItem = "cobblemon_utility:atksilvercap"
+
+["Wonder Trade Settings"]
+	#If true, Wonder Trades will return a Pokemon of the same rarity tier as the one deposited.
+	strictRarityMatching = true
+	#If strict rarity is true, this is the chance (0.0 to 1.0) that the trade will 'upgrade' to the next rarity tier.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	tierUpgradeChance = 0.05
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	legendaryWeight = 0.01
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	shinyWeight = 0.05
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	rareWeight = 0.2
+	#Base chance (0.0 to 1.0) to keep shiny status when depositing a shiny Pokemon in like-for-like trade (0.83 = 17% loss chance).
+	# Default: 0.83
+	# Range: 0.0 ~ 1.0
+	shinyRetainChance = 0.83
+	#Luck multiplier when using a Miracle Booster.
+	# Default: 4.0
+	# Range: 1.0 ~ 100.0
+	miracleBoostMultiplier = 4.0
+	#Luck multiplier for VIP players.
+	# Default: 6.0
+	# Range: 1.0 ~ 100.0
+	vipBoostMultiplier = 6.0
+	#Luck multiplier when a VIP player uses a Miracle Booster.
+	# Default: 8.0
+	# Range: 1.0 ~ 100.0
+	combinedBoostMultiplier = 8.0
+
+["Gym Settings"]
+	#A list of server commands to execute when a player defeats a Gym Leader for the first time.
+	#Placeholders:
+	#  %player% - The player's name
+	#  %leader% - The capitalized name of the Gym Leader (e.g., Brock)
+	#  %badge%  - The capitalized name of the Badge (e.g., Boulder)
+	gymVictoryCommands = ["give %player% minecraft:emerald 5", "tellraw @a {\"text\":\"%player% just defeated Gym Leader %leader% and earned the %badge% Badge!\",\"color\":\"gold\"}"]
+
+["Pokemart Settings"]
+	#List of all trades available at the PokeMart.
+	#Format: "level,action,item_id,currency_amount,item_amount"
+	#  level: The minimum building level required (1-5)
+	#  action: 'buy' (player pays currency to get items) or 'sell' (player gives items to get currency)
+	#  item_id: The registry name of the item (e.g., 'cobblemon:poke_ball')
+	#  currency_amount: How much currency is paid/rewarded
+	#  item_amount: How many of the item is given/taken
+	pokemartTrades = ["1,buy,cobblemon:poke_ball,1,5", "1,buy,cobblemon:potion,1,2", "1,sell,cobblemon:poke_ball,1,10", "1,sell,cobblemon:potion,1,4", "2,buy,cobblemon:great_ball,1,2", "2,buy,cobblemon:super_potion,1,2", "2,buy,cobblemon:repel,1,1", "2,buy,cobblemon:burn_heal,1,1", "2,buy,cobblemon:paralyze_heal,1,1", "2,buy,cobblemon:ice_heal,1,1", "2,buy,cobblemon:awakening,1,1", "2,buy,cobblemon:antidote,1,1", "2,buy,cobblemon:escape_rope,1,2", "2,sell,cobblemon:great_ball,1,4", "2,sell,cobblemon:super_potion,1,4", "2,sell,cobblemon:repel,1,2", "2,sell,cobblemon:burn_heal,1,2", "2,sell,cobblemon:paralyze_heal,1,2", "2,sell,cobblemon:ice_heal,1,2", "2,sell,cobblemon:awakening,1,2", "2,sell,cobblemon:antidote,1,2", "2,sell,cobblemon:escape_rope,1,4", "3,buy,cobblemon:hyper_potion,2,3", "3,buy,cobblemon:revive,4,4", "3,buy,cobblemon:super_repel,2,2", "3,sell,cobblemon:hyper_potion,2,6", "3,sell,cobblemon:revive,4,8", "3,sell,cobblemon:super_repel,2,4", "4,buy,cobblemon:ultra_ball,3,4", "4,buy,cobblemon:max_repel,3,3", "4,buy,cobblemon:full_heal,3,3", "4,sell,cobblemon:ultra_ball,3,8", "4,sell,cobblemon:max_repel,3,6", "4,sell,cobblemon:full_heal,3,6", "5,buy,cobblemon:full_restore,3,6", "5,buy,cobblemon:max_potion,3,6", "5,sell,cobblemon:full_restore,3,12", "5,sell,cobblemon:max_potion,3,10"]
+
+["Egg Step Counter Overlay"]
+	#Whether to show the smartwatch-style step counter on screen when carrying an Egg.
+	enableEggStepCounter = true
+	#Position of the Fitbit Egg Counter on screen: TOP_RIGHT, TOP_LEFT, BOTTOM_RIGHT, BOTTOM_LEFT.
+	#Allowed Values: TOP_RIGHT, TOP_LEFT, BOTTOM_RIGHT, BOTTOM_LEFT
+	eggCounterPosition = "TOP_RIGHT"
+	#Horizontal offset from the anchor position in pixels.
+	# Default: 0
+	# Range: -2000 ~ 2000
+	eggCounterOffsetX = 0
+	#Vertical offset from the anchor position in pixels.
+	# Default: 0
+	# Range: -2000 ~ 2000
+	eggCounterOffsetY = 0

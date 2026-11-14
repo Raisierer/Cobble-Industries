@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Oil Rock",
+    "blockName": "tfmgtweaks:oil_rock",
+    "order": 2,
+    "color": 42495,
+    "drawing": true
+  },
+  {
+    "name": "Diorite",
+    "blockName": "minecraft:diorite",
+    "order": 1,
+    "color": 16777215,
+    "drawing": false
+  },
+  {
+    "name": "Oil Deposit",
+    "blockName": "tfmg:oil_deposit",
+    "order": 3,
+    "color": 16711680,
+    "drawing": true
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {"version":2},
+  {"ingredient":{"id":"simulated:gimbal_sensor"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:clutch"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create_enchantment_industry:printer"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:mechanical_drill"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:powered_toggle_latch"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tracks:track_mount"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:linked_controller"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:redstone_link"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"offroad:rockcutting_wheel"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfmg:surface_scanner"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfmg:machine_input"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

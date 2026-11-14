@@ -1,0 +1,7 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"thetitansneo:void_block"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"thetitansneo:void"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"thetitansneo:void_sword"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"thetitansneo:wither_turret_ground"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

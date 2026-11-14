@@ -1,0 +1,10 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"tfmg:gasoline"},"type":"fluid_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfmg:gasoline_bucket"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfmg:crude_oil_bucket"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"petrochem:petroleum_bucket"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"petrochem:oil"},"type":"fluid_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"petrochem:oil_bucket"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:stripped_spruce_wood"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

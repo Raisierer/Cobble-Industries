@@ -1,0 +1,742 @@
+#General settings
+[general]
+
+		[general.effect.electricJudgment]
+			#ElectricJudgmentIfStorm
+			electricJudgmentIfStorm = true
+
+		[general.item.voidArmor]
+			#VoidArmorRadiation
+			voidArmorRadiation = true
+			#VoidArmorRadiationPlayer
+			voidArmorRadiationPlayer = true
+
+		[general.item.adminiumArmor]
+			#AdminiumArmorRadiation
+			adminiumArmorRadiation = true
+			#AdminiumArmorRadiationPlayer
+			adminiumArmorRadiationPlayer = true
+			#AdminiumArmorExplode
+			adminiumArmorExplode = true
+			#AdminiumArmorGravity
+			adminiumArmorGravity = true
+
+		[general.entity.titan]
+			#TitanFriendlyFire
+			titanFriendlyFire = true
+			#TitanAttackCreateMode
+			titanAttackCreateMode = true
+			#TitanFallBlockDecayFactor
+			# Default: 0.5
+			# Range: 0.0 ~ 1.0
+			titanFallBlockDecayFactor = 0.5
+
+			[general.entity.titan.omegafish]
+				#OmegafishSubdueRate
+				# Default: 0.01
+				# Range: 0.0 ~ 100.0
+				omegafishSubdueRate = 0.01
+
+			[general.entity.titan.creeperTitan]
+				#CreeperTitanChargedRate
+				# Default: 0.1
+				# Range: 0.0 ~ 100.0
+				creeperTitanChargedRate = 0.1
+				#CreeperTitanExplodeAsync
+				creeperTitanExplodeAsync = false
+				#CreeperTitanExplodeRange
+				# Default: 128
+				# Range: 0 ~ 1024
+				creeperTitanExplodeRange = 128
+				#ChargedCreeperTitanExplodeRange
+				# Default: 256
+				# Range: 0 ~ 1024
+				chargedCreeperTitanExplodeRange = 256
+
+			[general.entity.titan.caveSpiderTitan]
+				#CaveSpiderTitanSubdueRate
+				# Default: 0.01
+				# Range: 0.0 ~ 100.0
+				caveSpiderTitanSubdueRate = 0.01
+
+	[general.spawn]
+		#MinionCanSpawn
+		minionCanSpawn = true
+		#TitanCanSpawn
+		titanCanSpawn = true
+
+		[general.spawn.spawnProtect]
+			#PlayerSpawnPosProtect
+			playerSpawnPosProtect = true
+			#PlayerSpawnPosDistance
+			# Default: 1024.0
+			# Range: 0.0 ~ 2048.0
+			playerSpawnPosDistance = 1024.0
+			#TitanSpawnIntervalDistance
+			# Default: 512.0
+			# Range: 512.0 ~ 2048.0
+			titanSpawnIntervalDistance = 512.0
+			#TitanSpawnNetherTop
+			titanSpawnNetherTop = true
+
+			[general.spawn.spawnRate.minion]
+				#MinionSpawnrate
+				# Default: 100.0
+				# Range: 0.0 ~ 100.0
+				minionSpawnrate = 100.0
+				#PriestSpawnrate
+				# Default: 25.0
+				# Range: 0.0 ~ 100.0
+				priestSpawnrate = 25.0
+				#ZealotSpawnrate
+				# Default: 12.5
+				# Range: 0.0 ~ 100.0
+				zealotSpawnrate = 12.5
+				#BishopSpawnrate
+				# Default: 5.0
+				# Range: 0.0 ~ 100.0
+				bishopSpawnrate = 5.0
+				#TemplarSpawnrate
+				# Default: 1.25
+				# Range: 0.0 ~ 100.0
+				templarSpawnrate = 1.25
+
+			[general.spawn.spawnRate.titan]
+				#SlimeTitanSpawnRate
+				# Default: 0.1
+				# Range: 0.0 ~ 100.0
+				slimeTitanSpawnRate = 0.1
+				#MagmaCubeTitanSpawnRate
+				# Default: 0.05
+				# Range: 0.0 ~ 100.0
+				magmaCubeTitanSpawnRate = 0.05
+				#OmegafishSpawnRate
+				# Default: 0.08
+				# Range: 0.0 ~ 100.0
+				omegafishSpawnRate = 0.08
+				#ZombieTitanSpawnRate
+				# Default: 0.05
+				# Range: 0.0 ~ 100.0
+				zombieTitanSpawnRate = 0.05
+				#SkeletonTitanSpawnRate
+				# Default: 0.05
+				# Range: 0.0 ~ 100.0
+				skeletonTitanSpawnRate = 0.05
+				#WitherSkeletonTitanSpawnRate
+				# Default: 0.025
+				# Range: 0.0 ~ 100.0
+				witherSkeletonTitanSpawnRate = 0.025
+				#CreeperTitanSpawnRate
+				# Default: 0.05
+				# Range: 0.0 ~ 100.0
+				creeperTitanSpawnRate = 0.05
+				#SpiderTitanSpawnRate
+				# Default: 0.08
+				# Range: 0.0 ~ 100.0
+				spiderTitanSpawnRate = 0.08
+				#CaveSpiderTitanSpawnRate
+				# Default: 0.08
+				# Range: 0.0 ~ 100.0
+				caveSpiderTitanSpawnRate = 0.08
+				#SpiderJockeyTitanSpawnRate
+				# Default: 0.0125
+				# Range: 0.0 ~ 100.0
+				spiderJockeyTitanSpawnRate = 0.0125
+				#ZombifiedPiglinTitanSpawnRate
+				# Default: 0.05
+				# Range: 0.0 ~ 100.0
+				zombifiedPiglinTitanSpawnRate = 0.05
+				#BlazeTitanSpawnRate
+				# Default: 0.025
+				# Range: 0.0 ~ 100.0
+				blazeTitanSpawnRate = 0.025
+				#EnderColossusSpawnRate
+				# Default: 0.002
+				# Range: 0.0 ~ 100.0
+				enderColossusSpawnRate = 0.002
+				#GhastTitanSpawnRate
+				# Default: 0.0125
+				# Range: 0.0 ~ 100.0
+				ghastTitanSpawnRate = 0.0125
+
+			[general.spawn.spawnCap.protoBall]
+				#ProtoBallMinionSpawnCap
+				# Default: 40
+				# Range: 0 ~ 1000
+				protoBallMinionSpawnCap = 40
+				#ProtoBallPriestSpawnCap
+				# Default: 20
+				# Range: 0 ~ 1000
+				protoBallPriestSpawnCap = 20
+				#ProtoBallZealotSpawnCap
+				# Default: 10
+				# Range: 0 ~ 1000
+				protoBallZealotSpawnCap = 10
+				#ProtoBallBishopSpawnCap
+				# Default: 5
+				# Range: 0 ~ 1000
+				protoBallBishopSpawnCap = 5
+
+			[general.spawn.spawnCap.omegafish]
+				#OmegafishMinionSpawnCap
+				# Default: 240
+				# Range: 0 ~ 1000
+				omegafishMinionSpawnCap = 240
+				#OmegafishPriestSpawnCap
+				# Default: 120
+				# Range: 0 ~ 1000
+				omegafishPriestSpawnCap = 120
+				#OmegafishZealotSpawnCap
+				# Default: 60
+				# Range: 0 ~ 1000
+				omegafishZealotSpawnCap = 60
+				#OmegafishBishopSpawnCap
+				# Default: 15
+				# Range: 0 ~ 1000
+				omegafishBishopSpawnCap = 15
+				#OmegafishTemplarSpawnCap
+				# Default: 8
+				# Range: 0 ~ 1000
+				omegafishTemplarSpawnCap = 8
+
+			[general.spawn.spawnCap.zombieTitan]
+				#ZombieTitanMinionSpawnCap
+				# Default: 200
+				# Range: 0 ~ 1000
+				zombieTitanMinionSpawnCap = 200
+				#ZombieTitanPriestSpawnCap
+				# Default: 100
+				# Range: 0 ~ 1000
+				zombieTitanPriestSpawnCap = 100
+				#ZombieTitanZealotSpawnCap
+				# Default: 50
+				# Range: 0 ~ 1000
+				zombieTitanZealotSpawnCap = 50
+				#ZombieTitanBishopSpawnCap
+				# Default: 20
+				# Range: 0 ~ 1000
+				zombieTitanBishopSpawnCap = 20
+				#ZombieTitanTemplarSpawnCap
+				# Default: 10
+				# Range: 0 ~ 1000
+				zombieTitanTemplarSpawnCap = 10
+				#ZombieTitanSpecialSpawnCap
+				# Default: 5
+				# Range: 0 ~ 1000
+				zombieTitanSpecialSpawnCap = 5
+
+			[general.spawn.spawnCap.skeletonTitan]
+				#SkeletonTitanMinionSpawnCap
+				# Default: 160
+				# Range: 0 ~ 1000
+				skeletonTitanMinionSpawnCap = 160
+				#SkeletonTitanPriestSpawnCap
+				# Default: 90
+				# Range: 0 ~ 1000
+				skeletonTitanPriestSpawnCap = 90
+				#SkeletonTitanZealotSpawnCap
+				# Default: 40
+				# Range: 0 ~ 1000
+				skeletonTitanZealotSpawnCap = 40
+				#SkeletonTitanBishopSpawnCap
+				# Default: 20
+				# Range: 0 ~ 1000
+				skeletonTitanBishopSpawnCap = 20
+				#SkeletonTitanTemplarSpawnCap
+				# Default: 10
+				# Range: 0 ~ 1000
+				skeletonTitanTemplarSpawnCap = 10
+
+			[general.spawn.spawnCap.witherSkeletonTitan]
+				#WitherSkeletonTitanMinionSpawnCap
+				# Default: 160
+				# Range: 0 ~ 1000
+				witherSkeletonTitanMinionSpawnCap = 160
+				#WitherSkeletonTitanPriestSpawnCap
+				# Default: 90
+				# Range: 0 ~ 1000
+				witherSkeletonTitanPriestSpawnCap = 90
+				#WitherSkeletonTitanZealotSpawnCap
+				# Default: 40
+				# Range: 0 ~ 1000
+				witherSkeletonTitanZealotSpawnCap = 40
+				#WitherSkeletonTitanBishopSpawnCap
+				# Default: 20
+				# Range: 0 ~ 1000
+				witherSkeletonTitanBishopSpawnCap = 20
+				#WitherSkeletonTitanTemplarSpawnCap
+				# Default: 10
+				# Range: 0 ~ 1000
+				witherSkeletonTitanTemplarSpawnCap = 10
+				#WitherSkeletonTitanSpecialSpawnCap
+				# Default: 6
+				# Range: 0 ~ 1000
+				witherSkeletonTitanSpecialSpawnCap = 6
+
+			[general.spawn.spawnCap.creeperTitan]
+				#CreeperTitanMinionSpawnCap
+				# Default: 120
+				# Range: 0 ~ 1000
+				creeperTitanMinionSpawnCap = 120
+				#CreeperTitanPriestSpawnCap
+				# Default: 60
+				# Range: 0 ~ 1000
+				creeperTitanPriestSpawnCap = 60
+				#CreeperTitanZealotSpawnCap
+				# Default: 30
+				# Range: 0 ~ 1000
+				creeperTitanZealotSpawnCap = 30
+				#CreeperTitanBishopSpawnCap
+				# Default: 15
+				# Range: 0 ~ 1000
+				creeperTitanBishopSpawnCap = 15
+				#CreeperTitanTemplarSpawnCap
+				# Default: 8
+				# Range: 0 ~ 1000
+				creeperTitanTemplarSpawnCap = 8
+
+			[general.spawn.spawnCap.spiderTitan]
+				#SpiderTitanMinionSpawnCap
+				# Default: 160
+				# Range: 0 ~ 1000
+				spiderTitanMinionSpawnCap = 160
+				#SpiderTitanPriestSpawnCap
+				# Default: 80
+				# Range: 0 ~ 1000
+				spiderTitanPriestSpawnCap = 80
+				#SpiderTitanZealotSpawnCap
+				# Default: 40
+				# Range: 0 ~ 1000
+				spiderTitanZealotSpawnCap = 40
+				#SpiderTitanBishopSpawnCap
+				# Default: 20
+				# Range: 0 ~ 1000
+				spiderTitanBishopSpawnCap = 20
+				#SpiderTitanTemplarSpawnCap
+				# Default: 7
+				# Range: 0 ~ 1000
+				spiderTitanTemplarSpawnCap = 7
+
+			[general.spawn.spawnCap.caveSpiderTitan]
+				#CaveSpiderTitanMinionSpawnCap
+				# Default: 180
+				# Range: 0 ~ 1000
+				caveSpiderTitanMinionSpawnCap = 180
+				#CaveSpiderTitanPriestSpawnCap
+				# Default: 80
+				# Range: 0 ~ 1000
+				caveSpiderTitanPriestSpawnCap = 80
+				#CaveSpiderTitanZealotSpawnCap
+				# Default: 20
+				# Range: 0 ~ 1000
+				caveSpiderTitanZealotSpawnCap = 20
+				#CaveSpiderTitanBishopSpawnCap
+				# Default: 15
+				# Range: 0 ~ 1000
+				caveSpiderTitanBishopSpawnCap = 15
+				#CaveSpiderTitanTemplarSpawnCap
+				# Default: 4
+				# Range: 0 ~ 1000
+				caveSpiderTitanTemplarSpawnCap = 4
+
+			[general.spawn.spawnCap.zombifiedPiglinTitan]
+				#ZombifiedPiglinTitanMinionSpawnCap
+				# Default: 200
+				# Range: 0 ~ 1000
+				zombifiedPiglinTitanMinionSpawnCap = 200
+				#ZombifiedPiglinTitanPriestSpawnCap
+				# Default: 100
+				# Range: 0 ~ 1000
+				zombifiedPiglinTitanPriestSpawnCap = 100
+				#ZombifiedPiglinTitanZealotSpawnCap
+				# Default: 50
+				# Range: 0 ~ 1000
+				zombifiedPiglinTitanZealotSpawnCap = 50
+				#ZombifiedPiglinTitanBishopSpawnCap
+				# Default: 20
+				# Range: 0 ~ 1000
+				zombifiedPiglinTitanBishopSpawnCap = 20
+				#ZombifiedPiglinTitanTemplarSpawnCap
+				# Default: 10
+				# Range: 0 ~ 1000
+				zombifiedPiglinTitanTemplarSpawnCap = 10
+				#ZombifiedPiglinTitanSpecialSpawnCap
+				# Default: 5
+				# Range: 0 ~ 1000
+				zombifiedPiglinTitanSpecialSpawnCap = 5
+
+			[general.spawn.spawnCap.blazeTitan]
+				#BlazeTitanMinionSpawnCap
+				# Default: 120
+				# Range: 0 ~ 1000
+				blazeTitanMinionSpawnCap = 120
+				#BlazeTitanPriestSpawnCap
+				# Default: 60
+				# Range: 0 ~ 1000
+				blazeTitanPriestSpawnCap = 60
+				#BlazeTitanZealotSpawnCap
+				# Default: 20
+				# Range: 0 ~ 1000
+				blazeTitanZealotSpawnCap = 20
+				#BlazeTitanBishopSpawnCap
+				# Default: 15
+				# Range: 0 ~ 1000
+				blazeTitanBishopSpawnCap = 15
+				#BlazeTitanTemplarSpawnCap
+				# Default: 8
+				# Range: 0 ~ 1000
+				blazeTitanTemplarSpawnCap = 8
+
+			[general.spawn.spawnCap.enderColossus]
+				#EnderColossusMinionSpawnCap
+				# Default: 160
+				# Range: 0 ~ 1000
+				enderColossusMinionSpawnCap = 160
+				#EnderColossusPriestSpawnCap
+				# Default: 80
+				# Range: 0 ~ 1000
+				enderColossusPriestSpawnCap = 80
+				#EnderColossusZealotSpawnCap
+				# Default: 40
+				# Range: 0 ~ 1000
+				enderColossusZealotSpawnCap = 40
+				#EnderColossusBishopSpawnCap
+				# Default: 30
+				# Range: 0 ~ 1000
+				enderColossusBishopSpawnCap = 30
+				#EnderColossusTemplarSpawnCap
+				# Default: 20
+				# Range: 0 ~ 1000
+				enderColossusTemplarSpawnCap = 20
+				#EnderColossusSpecialSpawnCap
+				# Default: 10
+				# Range: 0 ~ 1000
+				enderColossusSpecialSpawnCap = 10
+
+			[general.spawn.spawnCap.ghastTitan]
+				#GhastTitanMinionSpawnCap
+				# Default: 120
+				# Range: 0 ~ 1000
+				ghastTitanMinionSpawnCap = 120
+				#GhastTitanPriestSpawnCap
+				# Default: 60
+				# Range: 0 ~ 1000
+				ghastTitanPriestSpawnCap = 60
+				#GhastTitanZealotSpawnCap
+				# Default: 30
+				# Range: 0 ~ 1000
+				ghastTitanZealotSpawnCap = 30
+				#GhastTitanBishopSpawnCap
+				# Default: 15
+				# Range: 0 ~ 1000
+				ghastTitanBishopSpawnCap = 15
+				#GhastTitanTemplarSpawnCap
+				# Default: 8
+				# Range: 0 ~ 1000
+				ghastTitanTemplarSpawnCap = 8
+
+			[general.spawn.spawnCap.witherzilla]
+				#WitherzillaMinionSpawnCap
+				# Default: 1000
+				# Range: 0 ~ 10000
+				witherzillaMinionSpawnCap = 1000
+
+				[general.summon.summonRate.minion.bishop]
+					#BishopSummonMinionSpawnRate
+					# Default: 0.167
+					# Range: 0.0 ~ 100.0
+					bishopSummonMinionSpawnRate = 0.167
+					#BishopSummonPriestSpawnRate
+					# Default: 0.083
+					# Range: 0.0 ~ 100.0
+					bishopSummonPriestSpawnRate = 0.083
+
+				[general.summon.summonRate.minion.templar]
+					#TemplarSummonMinionSpawnRate
+					# Default: 0.167
+					# Range: 0.0 ~ 100.0
+					templarSummonMinionSpawnRate = 0.167
+					#TemplarSummonPriestSpawnRate
+					# Default: 0.083
+					# Range: 0.0 ~ 100.0
+					templarSummonPriestSpawnRate = 0.083
+					#TemplarSummonZealotSpawnRate
+					# Default: 0.042
+					# Range: 0.0 ~ 100.0
+					templarSummonZealotSpawnRate = 0.042
+
+				[general.summon.summonRate.titan.snowGolemTitan]
+					#SnowGolemTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					snowGolemTitanSummonMinionSpawnRate = 5.0
+
+				[general.summon.summonRate.titan.omegafish]
+					#OmegafishSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					omegafishSummonMinionSpawnRate = 5.0
+					#OmegafishSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					omegafishSummonPriestSpawnRate = 2.5
+					#OmegafishSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					omegafishSummonZealotSpawnRate = 1.25
+					#OmegafishSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					omegafishSummonBishopSpawnRate = 0.625
+					#OmegafishSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					omegafishSummonTemplarSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.zombieTitan]
+					#ZombieTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					zombieTitanSummonMinionSpawnRate = 5.0
+					#ZombieTitanSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					zombieTitanSummonPriestSpawnRate = 2.5
+					#ZombieTitanSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					zombieTitanSummonZealotSpawnRate = 1.25
+					#ZombieTitanSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					zombieTitanSummonBishopSpawnRate = 0.625
+					#ZombieTitanSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					zombieTitanSummonTemplarSpawnRate = 0.3125
+					#ZombieTitanSummonSpecialMinionSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					zombieTitanSummonSpecialMinionSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.skeletonTitan]
+					#SkeletonTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					skeletonTitanSummonMinionSpawnRate = 5.0
+					#SkeletonTitanSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					skeletonTitanSummonPriestSpawnRate = 2.5
+					#SkeletonTitanSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					skeletonTitanSummonZealotSpawnRate = 1.25
+					#SkeletonTitanSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					skeletonTitanSummonBishopSpawnRate = 0.625
+					#SkeletonTitanSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					skeletonTitanSummonTemplarSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.witherSkeletonTitan]
+					#WitherSkeletonTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					witherSkeletonTitanSummonMinionSpawnRate = 5.0
+					#WitherSkeletonTitanSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					witherSkeletonTitanSummonPriestSpawnRate = 2.5
+					#WitherSkeletonTitanSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					witherSkeletonTitanSummonZealotSpawnRate = 1.25
+					#WitherSkeletonTitanSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					witherSkeletonTitanSummonBishopSpawnRate = 0.625
+					#WitherSkeletonTitanSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					witherSkeletonTitanSummonTemplarSpawnRate = 0.3125
+					#WitherSkeletonTitanSummonSpecialMinionSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					witherSkeletonTitanSummonSpecialMinionSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.creeperTitan]
+					#CreeperTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					creeperTitanSummonMinionSpawnRate = 5.0
+					#CreeperTitanSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					creeperTitanSummonPriestSpawnRate = 2.5
+					#CreeperTitanSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					creeperTitanSummonZealotSpawnRate = 1.25
+					#CreeperTitanSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					creeperTitanSummonBishopSpawnRate = 0.625
+					#CreeperTitanSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					creeperTitanSummonTemplarSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.spiderTitan]
+					#SpiderTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					spiderTitanSummonMinionSpawnRate = 5.0
+					#SpiderTitanSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					spiderTitanSummonPriestSpawnRate = 2.5
+					#SpiderTitanSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					spiderTitanSummonZealotSpawnRate = 1.25
+					#SpiderTitanSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					spiderTitanSummonBishopSpawnRate = 0.625
+					#SpiderTitanSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					spiderTitanSummonTemplarSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.caveSpiderTitan]
+					#CaveSpiderTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					caveSpiderTitanSummonMinionSpawnRate = 5.0
+					#CaveSpiderTitanSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					caveSpiderTitanSummonPriestSpawnRate = 2.5
+					#CaveSpiderTitanSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					caveSpiderTitanSummonZealotSpawnRate = 1.25
+					#CaveSpiderTitanSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					caveSpiderTitanSummonBishopSpawnRate = 0.625
+					#CaveSpiderTitanSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					caveSpiderTitanSummonTemplarSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.zombifiedPiglinTitan]
+					#ZombifiedPiglinTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					zombifiedPiglinTitanSummonMinionSpawnRate = 5.0
+					#ZombifiedPiglinTitanSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					zombifiedPiglinTitanSummonPriestSpawnRate = 2.5
+					#ZombifiedPiglinTitanSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					zombifiedPiglinTitanSummonZealotSpawnRate = 1.25
+					#ZombifiedPiglinTitanSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					zombifiedPiglinTitanSummonBishopSpawnRate = 0.625
+					#ZombifiedPiglinTitanSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					zombifiedPiglinTitanSummonTemplarSpawnRate = 0.3125
+					#ZombifiedPiglinTitanSummonSpecialMinionSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					zombifiedPiglinTitanSummonSpecialMinionSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.blazeTitan]
+					#BlazeTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					blazeTitanSummonMinionSpawnRate = 5.0
+					#BlazeTitanSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					blazeTitanSummonPriestSpawnRate = 2.5
+					#BlazeTitanSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					blazeTitanSummonZealotSpawnRate = 1.25
+					#BlazeTitanSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					blazeTitanSummonBishopSpawnRate = 0.625
+					#BlazeTitanSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					blazeTitanSummonTemplarSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.enderColossus]
+					#EnderColossusSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					enderColossusSummonMinionSpawnRate = 5.0
+					#EnderColossusSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					enderColossusSummonPriestSpawnRate = 2.5
+					#EnderColossusSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					enderColossusSummonZealotSpawnRate = 1.25
+					#EnderColossusSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					enderColossusSummonBishopSpawnRate = 0.625
+					#EnderColossusSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					enderColossusSummonTemplarSpawnRate = 0.3125
+					#EnderColossusSummonSpecialMinionSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					enderColossusSummonSpecialMinionSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.ghastTitan]
+					#GhastTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					ghastTitanSummonMinionSpawnRate = 5.0
+					#GhastTitanSummonPriestSpawnRate
+					# Default: 2.5
+					# Range: 0.0 ~ 100.0
+					ghastTitanSummonPriestSpawnRate = 2.5
+					#GhastTitanSummonZealotSpawnRate
+					# Default: 1.25
+					# Range: 0.0 ~ 100.0
+					ghastTitanSummonZealotSpawnRate = 1.25
+					#GhastTitanSummonBishopSpawnRate
+					# Default: 0.625
+					# Range: 0.0 ~ 100.0
+					ghastTitanSummonBishopSpawnRate = 0.625
+					#GhastTitanSummonTemplarSpawnRate
+					# Default: 0.3125
+					# Range: 0.0 ~ 100.0
+					ghastTitanSummonTemplarSpawnRate = 0.3125
+
+				[general.summon.summonRate.titan.ironGolemTitan]
+					#IronGolemTitanSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					ironGolemTitanSummonMinionSpawnRate = 5.0
+
+				[general.summon.summonRate.titan.witherzilla]
+					#WitherzillaSummonMinionSpawnRate
+					# Default: 5.0
+					# Range: 0.0 ~ 100.0
+					witherzillaSummonMinionSpawnRate = 5.0

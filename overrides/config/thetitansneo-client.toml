@@ -1,0 +1,48 @@
+#General settings
+[general]
+
+	[general.player]
+		#PlayerHealthBar
+		playerHealthBar = true
+
+	[general.titan]
+		#TitanWeaponOldModel
+		titanWeaponOldModel = false
+
+		[general.titan.titanPartBoxColor]
+			#TitanPartBoxRed
+			# Default: 64
+			# Range: 0 ~ 255
+			titanPartBoxRed = 64
+			#TitanPartBoxGreen
+			# Default: 255
+			# Range: 0 ~ 255
+			titanPartBoxGreen = 255
+			#TitanPartBoxBlue
+			# Default: 0
+			# Range: 0 ~ 255
+			titanPartBoxBlue = 0
+
+		[general.titan.titanBossBar]
+			#TitanBossBarRange
+			# Default: 256
+			# Range: 0 ~ 1024
+			titanBossBarRange = 256
+			#TitanBossBarAnimated
+			titanBossBarAnimated = true
+
+		[general.item.ultimaBlade]
+			#UltimaBladeHiddenParticles
+			ultimaBladeHiddenParticles = false
+
+		[general.item.optimaAxe]
+			#OptimaAxeHiddenParticles
+			optimaAxeHiddenParticles = false
+
+		[general.particle.damageIndicator]
+			#DamageIndicatorHiddenParticles
+			damageIndicatorHiddenParticles = false
+
+		[general.gui.createWorldScreen]
+			#SkipExperimentalWarnings
+			skipExperimentalWarnings = false

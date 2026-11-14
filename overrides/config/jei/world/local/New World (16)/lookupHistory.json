@@ -1,0 +1,5 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"sgjourney_mobs:asgard_construction_stone","components":"{\"minecraft:custom_data\":{ConstructionHollow:1b,ConstructionRotation:1,ConstructionShape:\"tube\",ConstructionSizeX:8,ConstructionSizeY:8,ConstructionSizeZ:20}}"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createpropulsion:auto_glue"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

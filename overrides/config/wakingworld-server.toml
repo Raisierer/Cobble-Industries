@@ -1,0 +1,290 @@
+#The parts of the mod. Switch one off and it is not there at all: nothing of it generates,
+#nothing of it runs, and the rest of the mod carries on without it. Take only the giants,
+#or only the cataclysms, or everything but the kingdoms.
+#In a new world a part switched off was never there at all. In a world that has already
+#been played, what it built is already standing and stays: nothing new of it is placed,
+#nothing of it begins again, and the buildings and people already in the world go on as they were.
+#Everything below this section is the finer grain: which of the five cataclysms, how big a crater.
+[features]
+	#The giants: the six shrines that hold them, the Sleeper's Vaults the offerings lie in,
+	#the rites that wake them, the fight, the hourglass that puts the ground back.
+	#Off: no shrine and no vault generates, an altar stays quiet, and nothing rises.
+	#The /wakingworld summon commands still work, so an operator can still show somebody.
+	colossi = true
+	#The seventh and last of them, in the End: the void reliquaries, the arena and the Titan itself.
+	#Off with colossi on: the six sleepers are still in the world, the ending is not.
+	#This does nothing with colossi off - there is no rite to finish.
+	titan = true
+	#The five: the Falling Sky, the Rising Mountain, the Blood Moon, the Wandering Column,
+	#the Turning Ground - with their omens, the unrest a giant leaves behind, and the blight.
+	#Off: the weather is Minecraft's again. The /wakingworld commands still work.
+	cataclysms = true
+	#The living towns: their kings, guards, townsfolk and traders, the permits and the treasury.
+	#Off: no kingdom generates and none of its people are in the world.
+	kingdoms = true
+	#The dead world you walk through: the ruins, the empty hamlets, the ember forges and the
+	#drowned cisterns, the Dead Letters in them, and the thralls, wraiths and keepers that wander.
+	#Off: the country is empty of the old people. The vaults stay - they belong to the giants.
+	ruins = true
+	#The dark mage and his tower: the one man in the world who will tell you the price of a
+	#cataclysm, and hand you the stone to ask for it on. Attack him and he is a boss instead.
+	#Off: no tower generates, and nobody is selling.
+	mage = true
+	#The Named Lands: the world is divided into squares, and each one is named the first time somebody walks into it.
+	#The name is shown once, as a title card, and then lives in /wakingworld lands and on the Wayfarer's Chart.
+	#Off: the Chart is blank, and a land is just ground again.
+	namedLands = false
+
+[colossi]
+	#Stomps, slams, landings and thrown boulders tear craters into the ground and fling the blocks around.
+	#Off: only particles, the world stays as it was.
+	terrainDamage = true
+	#A walking colossus breaks through trees, plants, snow and loose ground instead of walking around them.
+	trample = true
+	#Multiplier on crater sizes (0.25 = small dents, 1 = default, 2 = mountains fall).
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	craterScale = 1.0
+	#Upper bound on falling-block entities one impact may spawn (performance).
+	# Default: 80
+	# Range: 0 ~ 400
+	maxFlyingBlocks = 80
+	#How many blocks of a dying colossus come down as real falling blocks (the rest is dust). Performance.
+	# Default: 450
+	# Range: 0 ~ 1500
+	collapseBlocks = 450
+	#A dead colossus leaves a mound of its own blocks where it fell (its rubble lands on top of it).
+	deathMound = true
+
+[letters]
+	#Let Gemini write the Dead Letters for your world (needs geminiApiKey). Off or without a key: the built-in letters.
+	geminiLetters = true
+	#Your Google AI Studio API key (https://aistudio.google.com/apikey). Stays on the server; never shown to players.
+	geminiApiKey = ""
+	#The Gemini model to write with. A retired model's error names its successor; the mod follows
+	#that by itself, but set it here to keep it.
+	#The default is a lite model on purpose. A free key's allowance is per model and per day, and on
+	#the bigger models it is twenty requests - which one evening of walking into new lands spends
+	#before you have read a single letter, after which everything quietly comes from the templates.
+	#The lite models have a far larger free allowance, they answer faster, and naming a wood and
+	#writing four lines from a dead man does not need a frontier model. Point this at a bigger one
+	#if you have a paid key and want the prose.
+	geminiModel = "gemini-flash-lite-latest"
+	#The language the AI writes the letters in (item names stay English).
+	letterLanguage = "English"
+	#Have Gemini read every Dead Letter aloud in its writer's voice (needs geminiApiKey; the voice is made once,
+	#when the letter is written, and kept with the world). A free key allows only a handful of voices a day; the rest stay silent.
+	voicedLetters = true
+	#The Gemini text-to-speech model for the letters' voices.
+	voiceModel = "gemini-2.5-flash-preview-tts"
+
+[rites]
+	#Multiplies every count below (0.5 = half price, 2 = double); each offering still needs at least one.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	riteCostMultiplier = 1.0
+	#Sleeper's Embers a shrine's altar wants for its rite.
+	# Default: 1
+	# Range: 1 ~ 64
+	riteEmbers = 1
+	#Runes of the shrine's own kind its altar wants.
+	# Default: 1
+	# Range: 1 ~ 64
+	riteRunes = 1
+	#Multiplies the land's gift (amethyst, rooted dirt, gold, blue ice, prismarine crystals, glow berries) - the defaults are 4 or 8.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	riteGiftMultiplier = 1.0
+	#Runes of its land each of the six lesser altars round the Titan's wants (0 = the lesser altars are not needed).
+	# Default: 2
+	# Range: 0 ~ 64
+	lesserAltarRunes = 2
+	#The Titan's altar wants the Void Sigil out of a reliquary besides the Key.
+	titanNeedsSigil = true
+	#The Titan's altar wants the Dragon Egg besides the Key (it is given back when the Titan falls).
+	titanNeedsEgg = true
+
+[titan]
+	#The Titan's rite needs the Dragon Egg, and the End has only the one. On: a dropped egg cannot burn, blow up or despawn,
+	#and one that falls into the void is set back on the island it fell from.
+	dragonEggIndestructible = true
+	#On: every Ender Dragon that dies leaves an egg on the podium if none lies there, not only the first (vanilla) - so a lost egg can be replaced.
+	dragonEggEveryDragon = true
+
+[cataclysms]
+	#The Falling Sky: on a rare night the stars come down around whoever is out in the open.
+	#Off: no meteor showers at all (the /wakingworld meteor commands still work).
+	meteorShowers = true
+	#The chance, rolled once at dusk on any night that is allowed one, that a shower starts (0.1 = one night in ten).
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	meteorChance = 0.01
+	#Days that must pass after a shower before another may start.
+	# Default: 8
+	# Range: 0 ~ 1000
+	daysBetweenShowers = 8
+	#How many stars fall in one shower (they come 5-13 seconds apart).
+	# Default: 14
+	# Range: 1 ~ 200
+	meteorsPerShower = 1
+	#How long a shower may last, in seconds, however many stars are left.
+	# Default: 180
+	# Range: 20 ~ 3600
+	showerLengthSeconds = 180
+	#No star falls this close to the world spawn or to any player's bed (0 = nowhere is safe).
+	# Default: 64
+	# Range: 0 ~ 512
+	meteorSafeRadius = 512
+	#The Rising Mountain: a volcano that builds itself in front of you over a few minutes and leaves a real mountain.
+	#Off: no volcanoes (the /wakingworld volcano command still works).
+	volcanoes = false
+	#The chance, rolled once in the morning on any day that is allowed one, that a volcano opens.
+	# Default: 0.06
+	# Range: 0.0 ~ 1.0
+	volcanoChance = 0.06
+	#Days that must pass after a volcano before another may open.
+	# Default: 14
+	# Range: 0 ~ 1000
+	daysBetweenVolcanoes = 14
+	#How many courses tall the cone grows - roughly its height in blocks above the ground it stands on.
+	# Default: 28
+	# Range: 6 ~ 120
+	volcanoHeight = 28
+	#The radius of the foot of the cone, in blocks. The cone tapers as it climbs.
+	# Default: 16
+	# Range: 6 ~ 48
+	volcanoRadius = 16
+	#How long the mountain takes to rise, in minutes. Longer is calmer on the server and better to watch.
+	# Default: 1
+	# Range: 1 ~ 60
+	volcanoMinutes = 1
+	#A volcano throws molten rock as well as cold: one bomb in three arcs out of the throat
+	#and leaves lava where it lands, which then does what lava does. Off: it throws only stone,
+	#so a volcano in a forest does not set the forest alight.
+	volcanoLavaBombs = false
+	#Write down what each cataclysm changes, so an Hourglass of Restoration can put the country
+	#back the way it was - the same item and the same gesture that undoes a colossus fight.
+	#Off: what a cataclysm does to your world is permanent, and the world saves a little smaller.
+	cataclysmRestore = true
+	#The Blood Moon: a night that keeps sending monsters at you until the sun comes up.
+	#Off: no blood moons (the /wakingworld bloodmoon command still works).
+	bloodMoons = false
+	#The chance, rolled once at nightfall on any night that is allowed one, that the moon turns.
+	# Default: 0.08
+	# Range: 0.0 ~ 1.0
+	bloodMoonChance = 0.08
+	#Days that must pass after a blood moon before another may rise.
+	# Default: 10
+	# Range: 0 ~ 1000
+	daysBetweenBloodMoons = 10
+	#How many monsters a wave may place around one player (it starts smaller and works up).
+	# Default: 6
+	# Range: 1 ~ 40
+	bloodMoonWaveSize = 6
+	#Seconds between waves.
+	# Default: 12
+	# Range: 3 ~ 300
+	bloodMoonWaveSeconds = 12
+	#The Wandering Column: a tornado that walks across the country, lifting what is loose.
+	#It never takes a block that is under a roof, in a lit room, or holds anything.
+	#Off: no tornadoes (the /wakingworld tornado command still works).
+	tornadoes = false
+	#The chance, rolled once in the afternoon on any day that is allowed one, that a tornado forms.
+	# Default: 0.07
+	# Range: 0.0 ~ 1.0
+	tornadoChance = 0.07
+	#Days that must pass after a tornado before another may form.
+	# Default: 9
+	# Range: 0 ~ 1000
+	daysBetweenTornadoes = 9
+	#How long a tornado lives, in seconds.
+	# Default: 90
+	# Range: 10 ~ 1200
+	tornadoSeconds = 90
+	#The Turning Ground: half a minute of shaking, and a fault opened across the country.
+	#Off: no earthquakes (the /wakingworld earthquake command still works).
+	earthquakes = false
+	#The chance, rolled once a day on any day that is allowed one, that the ground turns.
+	# Default: 0.07
+	# Range: 0.0 ~ 1.0
+	earthquakeChance = 0.07
+	#Days that must pass after an earthquake before another may come.
+	# Default: 11
+	# Range: 0 ~ 1000
+	daysBetweenEarthquakes = 11
+	#How long the shaking lasts, in seconds.
+	# Default: 26
+	# Range: 5 ~ 300
+	earthquakeSeconds = 26
+	#Warn the world before a cataclysm: a low note out of the ground, the light going wrong,
+	#the animals leaving, and a line in the chat. Off: they simply begin.
+	omens = false
+	#How long the warning runs before the cataclysm itself, in seconds.
+	# Default: 40
+	# Range: 5 ~ 600
+	omenSeconds = 40
+	#The ground does not settle where a giant rose. Waking one, and killing one, leave the land
+	#around it unquiet for a while: cataclysms are likelier there, and they aim at it.
+	#Off: the two halves of the mod ignore each other, as they did in 0.1.
+	unrest = false
+	#How many days the land stays unquiet after a giant rose or fell there.
+	# Default: 12
+	# Range: 1 ~ 400
+	unrestDays = 12
+	#How much likelier a cataclysm is over the most unquiet ground (1 = no difference,
+	#2 = up to three times as likely where a giant has just died).
+	# Default: 2.0
+	# Range: 0.0 ~ 20.0
+	unrestFactor = 2.0
+	#The chance that a cataclysm breaking over a sleeping giant's shrine wakes it by itself,
+	#with no rite and nobody's leave. 0 = a shrine is only ever opened by a player.
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	answerChance = 0.25
+	#A giant already awake under a blood moon is stronger and faster while it lasts.
+	bloodMoonColossi = false
+	#How long the flow takes to set into rock after the mountain is finished.
+	#It crusts over from the bottom up; the crater pool is left glowing for good.
+	# Default: 8
+	# Range: 1 ~ 240
+	volcanoCoolMinutes = 8
+	#A cataclysm flattens what is growing where it passes: crops, flowers, saplings, and
+	#the farmland under them in patches. It never breaks a block a player laid.
+	#Off: fields are the one thing in the world a cataclysm walks straight over.
+	blight = false
+
+[story]
+	#Say once, the first time somebody joins, what this mod is and where to read the rest.
+	#Off: they find out on their own, which for the first few days looks like nothing happening.
+	greeting = true
+
+[lands]
+	#The grain of the map, in blocks: the size of one square a land is built out of.
+	#This is NOT how big a land is - see landCells. Smaller squares make a land's border follow
+	#the coast and the treeline more closely, and cost a little more to work out.
+	# Default: 160
+	# Range: 32 ~ 4096
+	landSize = 160
+	#How many squares a land may grow to. A land is grown from the square you walk into,
+	#outwards over country of the same kind, so its border is the shape of the country and not a
+	#rectangle. Larger means bigger countries and rarer title cards: 1 puts back the old behaviour
+	#of one square, one name.
+	# Default: 24
+	# Range: 1 ~ 64
+	landCells = 24
+	#The fewest squares a land is allowed to be. Country of the same kind is what a land grows
+	#over, and at this square size the kind often changes from one square to the next - a river
+	#through a wood, a ridge across a plain - which left the map covered in one-square lands whose
+	#names had to be abbreviated to fit. A land short of this many squares keeps taking the nearest
+	#unclaimed ones whatever kind they are, so no land is a lonely rectangle. 1 switches it off.
+	# Default: 6
+	# Range: 1 ~ 64
+	landMinCells = 6
+	#Write the land's name and lore into the chat as well as showing the card.
+	#Off (the default): only the card. The card says the same thing at the same moment, so the line
+	#under it was two of everything, and it pushed the chat up the screen every time you crossed a
+	#border. What you have walked is kept either way - on the Wayfarer's Chart and in /wakingworld lands.
+	landChat = false
+	#Let Gemini name the lands from what is actually on the ground there (needs geminiApiKey).
+	#Off or without a key: the built-in names, which are chosen by the terrain the same way.
+	geminiLands = true

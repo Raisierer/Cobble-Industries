@@ -1,0 +1,41 @@
+[loot]
+	#If true, spells from this mod only drop from Aether loot (dungeons, Aether mobs) and never from Iron's Spells' generic loot.
+	aetherExclusiveSpells = true
+
+[spells]
+	#Multiplier for how long Aercloud Step platforms last.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	aercloudDurationMultiplier = 1.0
+	#Base melee damage of summoned Fire Minions (scaled by fire spell power).
+	# Default: 6.0
+	# Range: 0.0 ~ 100.0
+	fireMinionDamage = 6.0
+	#Seconds a summoned Moa waits without a rider before vanishing.
+	# Default: 5
+	# Range: 1 ~ 600
+	moaDismountUnsummonSeconds = 5
+
+[accessories]
+	#Spell power bonus of the Zanite Focus Pendant when fully repaired (0.05 = +5%).
+	# Default: 0.05
+	# Range: 0.0 ~ 10.0
+	pendantMinSpellPower = 0.05
+	#Spell power bonus of the Zanite Focus Pendant just before it is fully worn.
+	# Default: 0.2
+	# Range: 0.0 ~ 10.0
+	pendantMaxSpellPower = 0.2
+
+#The spellcasters live in their shrines (the Valkyrie Sanctum and the Solar Altar) and appear when a shrine
+#generates, like Iron's Spells' casters. These weights can additionally let them spawn naturally in Aether biomes,
+#in the Aether's surface monster category (for reference, the Aether gives Whirlwinds 3, Blue Swets 6 and Aechor
+#Plants 7). 0 = shrines only. Applied when a world loads.
+[mobs]
+	#Natural spawn weight of the Valkyrie Sorceress on the Aether's surface. Since v1.6 they live in Valkyrie Sanctums, so this is 0 by default (it was 3).
+	# Default: 0
+	# Range: 0 ~ 100
+	valkyrieSorceressNaturalSpawnWeight = 0
+	#Natural spawn weight of the Solar Acolyte on the Aether's surface. Since v1.6 they live in Solar Altars, so this is 0 by default (it was 2).
+	# Default: 0
+	# Range: 0 ~ 100
+	solarAcolyteNaturalSpawnWeight = 0

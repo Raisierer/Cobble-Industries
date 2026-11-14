@@ -1,0 +1,124 @@
+{
+  "config_version": "2.0.35",
+  "config_datetime": "2026-09-18_19-00-49",
+  "general": {
+    "prevent_structure_overlap": true,
+    "overlap_padding": 1
+  },
+  "structure_namespaces": [
+    {
+      "name": "ati_structures",
+      "enable_flatness_check": true
+    },
+    {
+      "name": "big_lost_city",
+      "enable_flatness_check": true
+    },
+    {
+      "name": "create_rns",
+      "biome_check_blacklisted_biomes": [
+        "",
+        "#minecraft:is_river",
+        "#c:is_river",
+        "#minecraft:is_ocean",
+        "#c:is_ocean"
+      ]
+    },
+    {
+      "name": "idas",
+      "enable_flatness_check": true
+    },
+    {
+      "name": "integrated_cobblemon",
+      "enable_min_distance_from_world_center": true,
+      "min_distance_from_world_center": 1000
+    },
+    {
+      "name": "wind_spellbooks",
+      "enable_flatness_check": true
+    }
+  ],
+  "structures": [
+    {
+      "name": "integrated_cobblemon:dragon_gym",
+      "override_global_distance_from_world_center": true,
+      "enable_min_distance_from_world_center": true,
+      "min_distance_from_world_center": 1000
+    },
+    {
+      "name": "integrated_villages:airship_village",
+      "start_height": {
+        "absolute": 150
+      }
+    },
+    {
+      "name": "legendarymonuments:spear_pillar",
+      "blacklisted_biomes": [
+        "minecraft:meadow",
+        "minecraft:jagged_peaks",
+        "minecraft:stony_peaks",
+        "minecraft:snowy_slopes",
+        "minecraft:cherry_grove",
+        "biomesoplenty:crag",
+        "biomesoplenty:jade_cliffs",
+        "terralith:emerald_peaks",
+        "terralith:painted_mountains",
+        "terralith:rocky_mountains",
+        "terralith:scarlet_mountains",
+        "terralith:volcanic_peaks",
+        "terralith:alpine_grove",
+        "terralith:ashen_savanna",
+        "terralith:caldera",
+        "terralith:savanna_slopes",
+        "terralith:siberian_grove",
+        "terralith:snowy_maple_forest",
+        "terralith:snowy_shield",
+        "terralith:tropical_jungle",
+        "terralith:volcanic_crater",
+        "minecraft:windswept_hills",
+        "minecraft:windswept_forest",
+        "minecraft:windswept_gravelly_hills",
+        "biomesoplenty:highland",
+        "terralith:fractured_savanna",
+        "terralith:haze_mountain",
+        "terralith:stony_spires",
+        "terralith:windswept_spires",
+        "terralith:alpine_highlands",
+        "terralith:arid_highlands",
+        "terralith:blooming_plateau",
+        "terralith:highlands",
+        "minecraft:grove",
+        "minecraft:windswept_savanna",
+        "biomesoplenty:mediterranean_forest",
+        "terralith:blooming_valley",
+        "terralith:forested_highlands",
+        "terralith:lavender_valley",
+        "terralith:lush_valley",
+        "terralith:moonlight_valley",
+        "terralith:sakura_valley",
+        "terralith:temperate_highlands",
+        "terralith:yosemite_lowlands",
+        "northstar:martian_peaks",
+        "biomesoplenty:moor",
+        "biomesoplenty:volcano",
+        "terralith:yosemite_cliffs"
+      ],
+      "enable_flatness_check": true
+    }
+  ],
+  "structure_sets": [
+    {
+      "name": "ae2:meteorite",
+      "frequency": 0.051000003
+    },
+    {
+      "name": "integrated_cobblemon:air_gyms",
+      "frequency": 0.5
+    },
+    {
+      "name": "integrated_villages:air_villages",
+      "frequency": 0.4
+    }
+  ],
+  "structure_template_pools": []
+}

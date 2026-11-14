@@ -1,0 +1,11 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"createnuclear:raw_uranium"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createnuclear:raw_uranium_block"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createnuclear:deepslate_uranium_ore"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"alexscaves:uranium"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"alexscaves:block_of_uranium"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"alexscaves:radrock_uranium_ore"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"alexscaves:uranium_rod"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"alexscaves:nuclear_bomb"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

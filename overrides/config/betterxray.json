@@ -1,0 +1,141 @@
+{
+  "enabled": true,
+  "caveFind": false,
+  "fullbright": false,
+  "terrainOpacity": 0.15,
+  "showWater": true,
+  "showLava": true,
+  "shaderOpacityPatch": false,
+  "updateCheckEnabled": true,
+  "highlightEnabled": true,
+  "tracersEnabled": false,
+  "groupVeins": true,
+  "highlightColor": -65281,
+  "highlightBlockColors": {},
+  "highlightRangeBlocks": 0,
+  "highlightBlocks": [],
+  "structureFinderEnabled": false,
+  "structureTracersEnabled": false,
+  "structures": [],
+  "mobEsp": {},
+  "itemEsp": {},
+  "mobEspEnabled": true,
+  "mobEspTracersEnabled": true,
+  "playerEspName": true,
+  "playerEspHealth": "BAR",
+  "mobEspRangeBlocks": 0,
+  "mobEspGroups": {
+    "players": {
+      "enabled": false,
+      "style": "OUTLINE",
+      "color": -1,
+      "tracer": false
+    },
+    "animals": {
+      "enabled": false,
+      "style": "OUTLINE",
+      "color": -11141291,
+      "tracer": false
+    },
+    "aquatic": {
+      "enabled": false,
+      "style": "OUTLINE",
+      "color": -11184641,
+      "tracer": false
+    },
+    "neutral": {
+      "enabled": false,
+      "style": "OUTLINE",
+      "color": -171,
+      "tracer": false
+    },
+    "villagers": {
+      "enabled": false,
+      "style": "OUTLINE",
+      "color": -5592406,
+      "tracer": false
+    },
+    "overworld_enemies": {
+      "enabled": false,
+      "style": "OUTLINE",
+      "color": -43691,
+      "tracer": false
+    },
+    "illagers": {
+      "enabled": false,
+      "style": "OUTLINE",
+      "color": -16711681,
+      "tracer": false
+    },
+    "nether_enemies": {
+      "enabled": false,
+      "style": "OUTLINE",
+      "color": -22016,
+      "tracer": false
+    },
+    "end": {
+      "enabled": false,
+      "style": "OUTLINE",
+      "color": -43521,
+      "tracer": false
+    },
+    "other": {
+      "enabled": false,
+      "style": "OUTLINE",
+      "color": -5592406,
+      "tracer": false
+    },
+    "objects": {
+      "enabled": false,
+      "style": "BOX",
+      "color": -30720,
+      "tracer": false
+    }
+  },
+  "activePreset": 0,
+  "presets": [
+    {
+      "name": "Preset 1",
+      "visibleBlocks": [
+        "minecraft:coal_ore",
+        "minecraft:deepslate_coal_ore",
+        "minecraft:iron_ore",
+        "minecraft:deepslate_iron_ore",
+        "minecraft:copper_ore",
+        "minecraft:deepslate_copper_ore",
+        "minecraft:gold_ore",
+        "minecraft:deepslate_gold_ore",
+        "minecraft:redstone_ore",
+        "minecraft:deepslate_redstone_ore",
+        "minecraft:lapis_ore",
+        "minecraft:deepslate_lapis_ore",
+        "minecraft:diamond_ore",
+        "minecraft:deepslate_diamond_ore",
+        "minecraft:emerald_ore",
+        "minecraft:deepslate_emerald_ore",
+        "minecraft:nether_gold_ore",
+        "minecraft:nether_quartz_ore",
+        "minecraft:ancient_debris",
+        "minecraft:chest",
+        "minecraft:trapped_chest",
+        "minecraft:ender_chest",
+        "minecraft:barrel",
+        "minecraft:spawner",
+        "minecraft:trial_spawner",
+        "minecraft:vault",
+        "tfmg:oil_deposit",
+        "tfmgtweaks:oil_rock",
+        "#c:ores/diamond",
+        "#minecraft:diamond_ores"
+      ]
+    },
+    {
+      "name": "Preset 2",
+      "visibleBlocks": []
+    },
+    {
+      "name": "Preset 3",
+      "visibleBlocks": []
+    }
+  ]
+}

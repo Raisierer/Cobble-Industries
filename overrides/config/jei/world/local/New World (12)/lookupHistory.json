@@ -1,0 +1,23 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"sgjourney:naquadah"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney:naquadah_generator_mark_ii"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney:stargate_variant_crystal","components":{"sgjourney:stargate_variant":"sgjourney:milky_way_sg-1"}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney_mobs:carson_beckett_spawn_egg"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney_mobs:p90"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"wakingworld:starstone"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"wakingworld:star_iron"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"wakingworld:sleepers_ember"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"wakingworld:sigil_prismarine"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"wakingworld:colossus_heart"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"wakingworld:hourglass_of_restoration"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"cobblefurnies:statue_pikachu"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"cobblemon:pokedex_red"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney:universe_stargate"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney:milky_way_stargate"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:nether_star"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"cbc_enhanced_shells:singularity_shell_mk5"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"cbc_enhanced_shells:nuke_shell"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"cbc_enhanced_shells:h_bomb_mini_shell"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"rctmod:trainer_card"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

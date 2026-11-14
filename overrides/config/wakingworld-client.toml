@@ -1,0 +1,23 @@
+[colossi]
+	#How much the camera shakes when a colossus stomps, lands or walks nearby (0 = off, 1 = default, 2 = double).
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	cameraShake = 1.0
+	#Play the colossus battle themes (awakening, one theme per kind, victory). Uses the Music volume slider.
+	bossMusic = true
+
+[letters]
+	#Start reading a Dead Letter aloud the moment it is opened, when the server has made a voice
+	#for it. Off (the default): it waits, and the speaker beside the seal starts it - a letter that
+	#begins talking at you before you have read a word of it is startling rather than atmospheric.
+	#Uses the Voice/Speech volume slider either way.
+	readLettersAloud = false
+
+[lands]
+	#Drop a waypoint on your map when you walk into a named land (JourneyMap and Xaero's, if you have one).
+	#Nothing happens without a map mod, and this changes nothing on the server.
+	landWaypoints = true
+
+[supporters]
+	#Draw the supporters' auras (yours and other players'). Off hides them on this client only; it changes nothing about who has one.
+	showAuras = true

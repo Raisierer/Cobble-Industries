@@ -1,0 +1,51 @@
+// Different values : "always", "sneak" or "never"
+{
+  "configVersion": 1,
+  "jade": {
+    "pokeSnack": {
+      "bitesLeft": "always",
+      "baitEffects": "always",
+      "ingredients": "sneak"
+    },
+    "discShelf": {
+      "pointedDisc": "always",
+      "moveDetails": "always",
+      "discCount": "always",
+      "contents": "always"
+    },
+    "berryTree": {
+      "stage": "always",
+      "mulch": "always",
+      "nextStage": "always"
+    },
+    "pasture": {
+      "owner": "always",
+      "count": "always",
+      "pokemonList": "sneak"
+    },
+    "healingMachine": {
+      "charge": "always",
+      "timers": "always"
+    },
+    "fossilMachine": {
+      "fossil": "always",
+      "result": "always",
+      "progress": "always"
+    },
+    "cookingPot": {
+      "dish": "always",
+      "progress": "always",
+      "lidWarning": "always"
+    },
+    "plants": {
+      "stoneGrowth": "always",
+      "herbMutation": "always"
+    },
+    "displayCase": {
+      "item": "always"
+    },
+    "pokemon": {
+      "evYield": "always"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "theme": "ONYX",
+  "strap": "MATCH_THEME",
+  "position": "TOP_CENTER",
+  "brand": "COBBLEBIT",
+  "tint": "MATCH_THEME",
+  "soundEnabled": true,
+  "eggHudMode": "COMPACT",
+  "alertsEnabled": true,
+  "alertSize": "NORMAL"
+}

@@ -1,0 +1,1649 @@
+[core_settings]
+	#Master switch for Create: Unified Fuels compatibility behavior.
+	#Turn this off to disable generated fuel compatibility and runtime adapters.
+	enable_compatibility = true
+	#Log a warning when a config entry turns a non-fuel process fluid into fuel.
+	warn_non_original_fuel_overrides = true
+	#Export tags, recipes and addon data from the resolved config as an always-active live datapack.
+	#Disable this only if you want CUF to provide runtime adapters without generated datapack content.
+	enable_live_datapack_export = true
+	#Allow fluids that are present in a consumer fuel tag but are not listed in known_fluids.
+	#Set this to false if you want every non-vanilla unified fuel to be explicitly listed in this config.
+	allow_unknown_tagged_fluids = true
+	#Log a short startup summary with prepared fuel groups.
+	log_startup_summary = true
+
+#Enable or disable each supported fuel consumer integration.
+#Optional addons are ignored when they are not installed.
+[supported_addons]
+	#Enable integration for Create: Diesel Generators.
+	create_diesel_generators = true
+	#Enable integration for Create: The Factory Must Grow / TFMG Community Edition.
+	tfmg = true
+	#Enable integration for Create Crafts & Additions.
+	create_crafts_and_additions_burner = true
+	#Enable integration for Create: Liquid Fuel.
+	create_liquid_fuel = true
+	#Enable integration for Create: Steam 'n' Rails.
+	steam_n_rails_trains = true
+	#Enable integration for Create Stuff 'N Additions.
+	create_stuff_and_additions_tank = true
+	#Enable integration for Create: Petrochem.
+	petrochem_diesel_engine = true
+	#Enable integration for Create: Petrochem.
+	petrochem_gasoline_engine = true
+	#Enable integration for Create: Petrochem.
+	petrochem_turbine = true
+
+#Shared fuel balance by group.
+#burn_time is ticks per 1000 mB bucket before efficiency_multiplier and per-fluid multipliers.
+#Process fluids stay blocked unless fuel_enabled=true and allow_non_original_fuel=true.
+[fuel_balance]
+
+	[fuel_balance.diesel]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 28000
+		# Range: 0 ~ 1000000
+		burn_time = 28000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.biodiesel]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 22000
+		# Range: 0 ~ 1000000
+		burn_time = 22000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.gasoline]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 24000
+		# Range: 0 ~ 1000000
+		burn_time = 24000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.ethanol]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 8000
+		# Range: 0 ~ 1000000
+		burn_time = 8000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.bioethanol]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 24000
+		# Range: 0 ~ 1000000
+		burn_time = 24000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "SUPERHEATED"
+
+	[fuel_balance.plant_oil]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 4800
+		# Range: 0 ~ 1000000
+		burn_time = 4800
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.kerosene]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 26000
+		# Range: 0 ~ 1000000
+		burn_time = 26000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "SUPERHEATED"
+
+	[fuel_balance.lpg]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 16000
+		# Range: 0 ~ 1000000
+		burn_time = 16000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.naphtha]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 20000
+		# Range: 0 ~ 1000000
+		burn_time = 20000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.crude_oil]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = false
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 0
+		# Range: 0 ~ 1000000
+		burn_time = 0
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "NONE"
+
+	[fuel_balance.heavy_oil]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = false
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 0
+		# Range: 0 ~ 1000000
+		burn_time = 0
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "NONE"
+
+	[fuel_balance.lubricant]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = false
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 0
+		# Range: 0 ~ 1000000
+		burn_time = 0
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "NONE"
+
+	[fuel_balance.fuel_oil]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 16800
+		# Range: 0 ~ 1000000
+		burn_time = 16800
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.refinery_intermediate]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = false
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 0
+		# Range: 0 ~ 1000000
+		burn_time = 0
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "NONE"
+
+	[fuel_balance.process_chemical]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = false
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 0
+		# Range: 0 ~ 1000000
+		burn_time = 0
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "NONE"
+
+	[fuel_balance.steam]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = false
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 0
+		# Range: 0 ~ 1000000
+		burn_time = 0
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "NONE"
+
+	[fuel_balance.creosote]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 4800
+		# Range: 0 ~ 1000000
+		burn_time = 4800
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.furnace_gas]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 4000
+		# Range: 0 ~ 1000000
+		burn_time = 4000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.butane]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 16000
+		# Range: 0 ~ 1000000
+		burn_time = 16000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.propane]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 16000
+		# Range: 0 ~ 1000000
+		burn_time = 16000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+	[fuel_balance.hydrogen]
+		#Include this fuel group in CUF tags and generated datapack entries.
+		enabled = true
+		#Treat this group as burnable fuel.
+		#Process-fluid groups also require allow_non_original_fuel=true.
+		fuel_enabled = true
+		#Safety confirmation for groups that are not fuel in their source mods.
+		#Leave this false unless you intentionally want a process fluid to burn.
+		allow_non_original_fuel = false
+		#Burn duration for 1000 mB before multipliers.
+		#20 ticks = 1 second.
+		#[in ticks]
+		# Default: 12000
+		# Range: 0 ~ 1000000
+		burn_time = 12000
+		#Multiplier applied to burn_time for this whole fuel group.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		efficiency_multiplier = 1.0
+		#Heat output used by integrations that support regular/superheated fuels.
+		#Allowed Values: NONE, REGULAR, SUPERHEATED
+		heat_tier = "REGULAR"
+
+#Known fluids are built-in fluid entries CUF understands.
+#Usually edit enabled, fuel_enabled or multiplier. Keep fluid_id unchanged unless you are deliberately remapping a known entry.
+[known_fluids]
+
+		[known_fluids.create_diesel_generators.diesel]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "createdieselgenerators:diesel"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "diesel"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.create_diesel_generators.biodiesel]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "createdieselgenerators:biodiesel"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "biodiesel"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.create_diesel_generators.gasoline]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "createdieselgenerators:gasoline"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "gasoline"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.create_diesel_generators.ethanol]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "createdieselgenerators:ethanol"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "ethanol"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.create_diesel_generators.plant_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "createdieselgenerators:plant_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "plant_oil"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.create_diesel_generators.crude_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "createdieselgenerators:crude_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "crude_oil"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.diesel]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:diesel"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "diesel"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.gasoline]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:gasoline"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "gasoline"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.kerosene]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:kerosene"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "kerosene"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.lpg]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:lpg"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "lpg"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.naphtha]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:naphtha"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "naphtha"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.crude_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:crude_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "crude_oil"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.heavy_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:heavy_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "heavy_oil"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.lubrication_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:lubrication_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "lubricant"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.creosote]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:creosote"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "creosote"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.furnace_gas]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:furnace_gas"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "furnace_gas"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.butane]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:butane"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "butane"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.propane]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:propane"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "propane"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.tfmg.hydrogen]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "tfmg:hydrogen"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "hydrogen"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.create_crafts_and_additions.bioethanol]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "createaddition:bioethanol"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "bioethanol"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.create_crafts_and_additions.seed_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "createaddition:seed_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "plant_oil"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.diesel]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:diesel"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "diesel"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.gasoline]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:gasoline"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "gasoline"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.kerosene]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:kerosene"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "kerosene"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.lpg]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:lpg"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "lpg"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.butane]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:butane"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "butane"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.propane]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:propane"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "propane"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.hydrogen]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:hydrogen"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "hydrogen"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.fuel_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:fuel_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "fuel_oil"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = true
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.petroleum]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:petroleum"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "crude_oil"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.lubricant]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:lubricant"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "lubricant"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.air]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:air"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "process_chemical"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.sulfuric_acid]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:sulfuric_acid"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "process_chemical"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.nitrogen]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:nitrogen"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "process_chemical"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.oxygen]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:oxygen"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "process_chemical"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.chlorine]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:chlorine"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "process_chemical"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.hydrogen_sulfide]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:hydrogen_sulfide"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "process_chemical"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.plastic]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:plastic"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "process_chemical"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.volatile_gas]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:volatile_gas"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.ethylene]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:ethylene"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.oil_brine]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:oil_brine"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.desalted_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:desalted_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.light_naphta]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:light_naphta"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.heavy_naphta]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:heavy_naphta"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.desulfurized_heavy_naphta]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:desulfurized_heavy_naphta"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.hydrocracked_gasoline]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:hydrocracked_gasoline"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.untreated_gasoline]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:untreated_gasoline"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.desulfurized_kerosene]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:desulfurized_kerosene"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.light_diesel]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:light_diesel"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.heavy_diesel]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:heavy_diesel"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.light_gas_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:light_gas_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.heavy_gas_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:heavy_gas_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.hydrotreated_gas_oil]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:hydrotreated_gas_oil"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.desulfurized_heavy_diesel]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:desulfurized_heavy_diesel"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.oil_residue]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:oil_residue"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.heavy_oil_residue]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:heavy_oil_residue"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "refinery_intermediate"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+		[known_fluids.petrochem.steam]
+			#Fluid registry id. Change this only when deliberately remapping a known CUF entry.
+			fluid_id = "petrochem:steam"
+			#Include this known fluid in CUF tags and generated datapack entries.
+			enabled = true
+			#Fuel group used for shared compatibility and balance.
+			group = "steam"
+			#Treat this specific fluid as burnable fuel.
+			#Non-fuel source fluids also require allow_non_original_fuel=true.
+			fuel_enabled = false
+			#Safety confirmation for fluids that are not fuel in their source mods.
+			#Leave this false unless you intentionally want this process fluid to burn.
+			allow_non_original_fuel = false
+			#Per-fluid multiplier applied after the fuel group's burn_time and efficiency_multiplier.
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			multiplier = 1.0
+
+#Extra fluid ids accepted by runtime adapters for each consumer.
+#Use comma, semicolon, whitespace or new lines between fluid ids.
+#These are for fluids CUF does not know yet. They do not receive balanced generated JSON stats.
+[unsafe_overrides]
+	#Known fluid ids forced into Create: Diesel Generators.
+	#Leave empty to use CUF defaults.
+	create_diesel_generators_allow_fluids = ""
+	#Known fluid ids blocked from Create: Diesel Generators.
+	#This wins over allow_fluids and CUF defaults.
+	create_diesel_generators_deny_fluids = ""
+	#Known fluid ids forced into Create: The Factory Must Grow / TFMG Community Edition.
+	#Leave empty to use CUF defaults.
+	tfmg_allow_fluids = ""
+	#Known fluid ids blocked from Create: The Factory Must Grow / TFMG Community Edition.
+	#This wins over allow_fluids and CUF defaults.
+	tfmg_deny_fluids = ""
+	#Known fluid ids forced into Create Crafts & Additions.
+	#Leave empty to use CUF defaults.
+	create_crafts_and_additions_burner_allow_fluids = ""
+	#Known fluid ids blocked from Create Crafts & Additions.
+	#This wins over allow_fluids and CUF defaults.
+	create_crafts_and_additions_burner_deny_fluids = ""
+	#Known fluid ids forced into Create: Liquid Fuel.
+	#Leave empty to use CUF defaults.
+	create_liquid_fuel_allow_fluids = ""
+	#Known fluid ids blocked from Create: Liquid Fuel.
+	#This wins over allow_fluids and CUF defaults.
+	create_liquid_fuel_deny_fluids = ""
+	#Known fluid ids forced into Create: Steam 'n' Rails.
+	#Leave empty to use CUF defaults.
+	steam_n_rails_trains_allow_fluids = ""
+	#Known fluid ids blocked from Create: Steam 'n' Rails.
+	#This wins over allow_fluids and CUF defaults.
+	steam_n_rails_trains_deny_fluids = ""
+	#Known fluid ids forced into Create Stuff 'N Additions.
+	#Leave empty to use CUF defaults.
+	create_stuff_and_additions_tank_allow_fluids = ""
+	#Known fluid ids blocked from Create Stuff 'N Additions.
+	#This wins over allow_fluids and CUF defaults.
+	create_stuff_and_additions_tank_deny_fluids = ""
+	#Extra unknown fluid ids accepted by Create: Diesel Generators.
+	create_diesel_generators_custom_fluids = ""
+	#Extra unknown fluid ids accepted by Create: The Factory Must Grow / TFMG Community Edition.
+	tfmg_custom_fluids = ""
+	#Extra unknown fluid ids accepted by Create Crafts & Additions.
+	create_crafts_and_additions_burner_custom_fluids = ""
+	#Extra unknown fluid ids accepted by Create: Liquid Fuel.
+	create_liquid_fuel_custom_fluids = ""
+	#Extra unknown fluid ids accepted by Create: Steam 'n' Rails.
+	steam_n_rails_trains_custom_fluids = ""
+	#Extra unknown fluid ids accepted by Create Stuff 'N Additions.
+	create_stuff_and_additions_tank_custom_fluids = ""
+	#Known fluid ids forced into Create: Petrochem.
+	#Leave empty to use CUF defaults.
+	petrochem_diesel_engine_allow_fluids = ""
+	#Known fluid ids blocked from Create: Petrochem.
+	#This wins over allow_fluids and CUF defaults.
+	petrochem_diesel_engine_deny_fluids = ""
+	#Known fluid ids forced into Create: Petrochem.
+	#Leave empty to use CUF defaults.
+	petrochem_gasoline_engine_allow_fluids = ""
+	#Known fluid ids blocked from Create: Petrochem.
+	#This wins over allow_fluids and CUF defaults.
+	petrochem_gasoline_engine_deny_fluids = ""
+	#Known fluid ids forced into Create: Petrochem.
+	#Leave empty to use CUF defaults.
+	petrochem_turbine_allow_fluids = ""
+	#Known fluid ids blocked from Create: Petrochem.
+	#This wins over allow_fluids and CUF defaults.
+	petrochem_turbine_deny_fluids = ""
+	#Extra unknown fluid ids accepted by Create: Petrochem.
+	petrochem_diesel_engine_custom_fluids = ""
+	#Extra unknown fluid ids accepted by Create: Petrochem.
+	petrochem_gasoline_engine_custom_fluids = ""
+	#Extra unknown fluid ids accepted by Create: Petrochem.
+	petrochem_turbine_custom_fluids = ""

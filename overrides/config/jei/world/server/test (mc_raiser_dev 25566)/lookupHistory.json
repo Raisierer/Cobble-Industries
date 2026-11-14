@@ -1,0 +1,21 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"sgjourney:classic_stargate_ring_block"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney:communication_crystal"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney:classic_stargate_base_block"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney:classic_stargate_chevron_block"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney:fusion_core","components":"{\"sgjourney:energy\":99999850000L,\"sgjourney:entropy\":0,\"sgjourney:fusion_fuel\":55505}"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createpropulsion:auto_glue"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney:sulfur_sand"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"alexscaves:sulfur_dust"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:gunpowder"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney_mobs:p90"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"sgjourney_mobs:zat"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"wakingworld:almanac"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"cobblemon:red_apricorn"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createcobblemonintegrations:red_apricorn_sheet"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createcobblemonintegrations:pokeball_top"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"cobblemon:poke_ball"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:raw_iron"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:iron_ore"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

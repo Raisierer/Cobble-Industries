@@ -1,0 +1,12 @@
+// Different values : true or false, except pastureMaxListed : 0 to 32
+{
+  "configVersion": 1,
+  "jade": {
+    "berryTree": true,
+    "pasture": true,
+    "pastureMaxListed": 6,
+    "healingMachine": true,
+    "fossilMachine": true,
+    "cookingPot": true
+  }
+}

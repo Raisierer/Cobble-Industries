@@ -1,0 +1,7 @@
+show_position = false
+#Allowed Values: ACTION_BAR, BAR, COLUMN, NONE
+overlay_style = "COLUMN"
+#Allowed Values: TOP, CENTER, BOTTOM
+vertical_alignment = "TOP"
+#Allowed Values: LEFT, RIGHT
+horizontal_alignment = "LEFT"

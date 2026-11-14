@@ -1,0 +1,6 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"simulated:honey_glue"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createthrusters:physics_staff","components":{"minecraft:custom_data":{"PressureMax":-1,"PhysicsStaffId":[1139436213,-1341111477,-1276558685,370320692],"LockedCount":0,"PressureCurrent":-1}}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"simulated:physics_assembler"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

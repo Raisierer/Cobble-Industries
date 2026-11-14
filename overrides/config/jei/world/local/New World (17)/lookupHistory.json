@@ -1,0 +1,7 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"minecraft:nether_star"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:end_crystal"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"cbc_enhanced_shells:h_bomb_mini_shell"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"biomesoplenty:maple_log"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

@@ -1,0 +1,20 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"createdieselgenerators:pumpjack_bearing"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"somakespells:aquamancer_staff"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"somakespells:withered_rose_staff","components":{"irons_spellbooks:spell_container":{"mustEquip":false,"data":[{"id":"somakespells:rose_secret","index":0,"level":5,"locked":true}],"maxSpells":1,"spellWheel":true}}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createdieselgenerators:pumpjack_hole"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createdieselgenerators:pumpjack_head"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createdieselgenerators:pumpjack_crank"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createdieselgenerators:distillation_controller"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createdieselgenerators:canister"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"northstar:hydrogen"},"type":"fluid_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"northstar:rocket_thruster"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createdieselgenerators:diesel"},"type":"fluid_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfmg:naphtha"},"type":"fluid_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"numismatics:sun"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"northstar:iron_space_suit_chestpiece"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"northstar:martian_sword"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createdieselgenerators:oil_scanner"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createdieselgenerators:burner"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

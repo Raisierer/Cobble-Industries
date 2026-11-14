@@ -1,0 +1,36 @@
+#Crafting Settings
+[crafting]
+	#Ticks before a pending crafting calculation times out (default: 200 = 10 seconds)
+	# Default: 200
+	# Range: 20 ~ 6000
+	craftingTimeoutTicks = 200
+	#Milliseconds before a failed crafting item can be retried (default: 30000 = 30 seconds)
+	# Default: 30000
+	# Range: 1000 ~ 300000
+	craftingFailureCooldownMs = 30000
+	#Maximum concurrent AE2 crafting jobs per terminal (default: 8)
+	# Default: 8
+	# Range: 1 ~ 64
+	maxConcurrentCraftingJobs = 8
+	#Maximum recursion depth when checking if items can be crafted (default: 6)
+	# Default: 6
+	# Range: 1 ~ 20
+	maxCraftDepth = 6
+
+#Performance Settings
+[performance]
+	#Ticks to cache the ME network item list (default: 20 = 1 second)
+	# Default: 20
+	# Range: 1 ~ 200
+	itemCacheDurationTicks = 20
+	#Ticks between warehouse link re-checks for linked terminals (default: 200 = 10 seconds)
+	# Default: 200
+	# Range: 40 ~ 2000
+	terminalRecheckIntervalTicks = 200
+
+#Feature Toggles
+[features]
+	#Allow redstone signal to disable Colony Terminal (default: true)
+	enableRedstoneControl = true
+	#Allow on-the-fly Domum Ornamentum block synthesis (default: true)
+	enableDOBlockSynthesis = true
