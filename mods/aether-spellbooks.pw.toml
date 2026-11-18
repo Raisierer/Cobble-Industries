@@ -1,0 +1,13 @@
+name = "Aether Spellbooks"
+filename = "aether_spellbooks-1.21.1-1.2.0-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "4285135cc242e7d510a91643c4581d769ffd3111"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9322930
+project-id = 1719192

@@ -1,0 +1,16 @@
+name = "Advanced XRay (Neoforge Edition)"
+filename = "advanced-xray-neoforge-21.0.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "48ef346b13c74634c24300b384b1e6ad63f26caf"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5432850
+project-id = 256256
+
+[option]
+optional = true

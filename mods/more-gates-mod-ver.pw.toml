@@ -1,0 +1,13 @@
+name = "Stargate Journey: MoreGates Addon"
+filename = "moregates-neoforge-1.21.1-4.4.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "403e4bef9441f5954a5abd3ca465eb943f9b5162"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9132895
+project-id = 1015656

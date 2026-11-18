@@ -1,0 +1,13 @@
+name = "OmniCompass"
+filename = "OmniCompass-neoforge-1.2.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "c68f927f7e05546ef75634998af38c19a89fd31f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8824774
+project-id = 1344204

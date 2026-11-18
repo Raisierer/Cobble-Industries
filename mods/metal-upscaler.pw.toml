@@ -1,0 +1,13 @@
+name = "Metal Upscaler"
+filename = "MetalUpscaler-neoforge-0.5.0+mc1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "4e1b5843b41cc902dae01268e321d4cb42a08a4b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9049617
+project-id = 1669444

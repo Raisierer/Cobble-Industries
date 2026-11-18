@@ -1,0 +1,13 @@
+name = "MapFrontiers"
+filename = "MapFrontiers-1.21.1-neoforge-3.0.0-beta.13.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0b76b9b4c5932e7d2692bd242977400f3b1afb84"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8968004
+project-id = 366783

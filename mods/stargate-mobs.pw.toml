@@ -1,0 +1,13 @@
+name = "Stargate Mobs"
+filename = "stargatemobs-1.0.7.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d514a7454358348bd8a7cc622ffa77b68e65dd10"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9058063
+project-id = 1619484

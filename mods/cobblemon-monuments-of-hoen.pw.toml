@@ -1,0 +1,13 @@
+name = "Cobblemon: Monuments of Hoen"
+filename = "Monuments Of Hoen Prism Expansion.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "03eb4e1ee8825d4cb420339bb9b02422d26eb272"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8523709
+project-id = 1600700

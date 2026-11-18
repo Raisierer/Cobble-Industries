@@ -1,0 +1,13 @@
+name = "The Waking World"
+filename = "wakingworld-0.2.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d3694ab65985e647ea23646e4b30a979dbd9f80c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8839882
+project-id = 1683580

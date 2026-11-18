@@ -1,0 +1,21 @@
+# Repo / dev environment files (not part of the pack)
+.jj/
+.devenv*
+.direnv/
+devenv.nix
+devenv.lock
+devenv.yaml
+devenv.local.*
+.pre-commit-config.yaml
+README.md
+.github/
+server/
+
+# Build outputs (exported packs at the repo root)
+/*.zip
+/*.mrpack
+/build/
+
+# Stale config backups written by NeoForge
+*.bak
+*.bak.*

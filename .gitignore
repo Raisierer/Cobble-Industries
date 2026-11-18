@@ -1,0 +1,19 @@
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+# packwiz export outputs
+/*.zip
+/*.mrpack
+/build/
+
+# docker server runtime data
+/server/data/
+/server/.env

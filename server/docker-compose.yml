@@ -1,0 +1,35 @@
+services:
+  mc:
+    image: itzg/minecraft-server:java21
+    container_name: cobble-industries
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    ports:
+      # Host and container ports are kept identical on purpose: Chunksmith derives its
+      # LOD backchannel port (game port + 1) from the server's real port and tells
+      # clients about it, so a remap like "25570:25565" would point clients at the wrong port.
+      - "${GAME_PORT:-25565}:${GAME_PORT:-25565}"
+      - "${LOD_PORT:-25566}:${LOD_PORT:-25566}"   # Chunksmith LOD backchannel (HTTP)
+    environment:
+      EULA: "TRUE"
+      SERVER_PORT: "${GAME_PORT:-25565}"   # written to server.properties
+      TYPE: NEOFORGE
+      VERSION: "1.21.1"
+      NEOFORGE_VERSION: "21.1.265"   # keep in sync with pack.toml [versions]
+      # packwiz-installer runs on every start and syncs only side=server/both files.
+      # Point at a tag (e.g. /v0.56/) for reproducible servers, or /main/ to track latest.
+      PACKWIZ_URL: "https://raw.githubusercontent.com/Raisierer/Cobble-Industries/main/pack.toml"
+      MEMORY: "10G"
+      USE_AIKAR_FLAGS: "true"
+      MOTD: "Cobble Industries"
+      DIFFICULTY: normal
+      VIEW_DISTANCE: "10"
+      SIMULATION_DISTANCE: "8"
+      MAX_TICK_TIME: "-1"            # heavy pack: avoid watchdog kills during worldgen/lag spikes
+      ALLOW_FLIGHT: "TRUE"           # Aeronautics/jetpacks would otherwise trigger "flying" kicks
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: "${RCON_PASSWORD:?set RCON_PASSWORD in server/.env}"
+      # OPS: "your_minecraft_name"
+    volumes:
+      - ./data:/data

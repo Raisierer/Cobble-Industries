@@ -1,0 +1,13 @@
+name = "MineColonies CustomRaids"
+filename = "mc-custom-raids-v2.3-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "edd0b7af3d52dc214ee21b85164d553690cce010"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8326935
+project-id = 1504916

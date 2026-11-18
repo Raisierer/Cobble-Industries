@@ -1,0 +1,13 @@
+name = "Create: Fill the Colonies"
+filename = "createfillthecolonies-1.21.1-neoforge-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "40d46dd253add8fffbd2cde72b594951572e5f51"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8297781
+project-id = 1450853

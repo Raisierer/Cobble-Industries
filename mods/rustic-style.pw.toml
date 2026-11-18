@@ -1,0 +1,13 @@
+name = "Rustic Style for MCol"
+filename = "rustic_forMcol_v1.4.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e0071a269c1d7877b60c6af26a97b39cf802429c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9374746
+project-id = 1632124

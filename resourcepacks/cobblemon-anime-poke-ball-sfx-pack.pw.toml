@@ -1,0 +1,13 @@
+name = "Cobblemon Anime Poké Ball SFX Pack"
+filename = "Cobblemon Anime Poké ball SFX Pack v1.1 MC1.21.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "879db15c507fbecdd0d2f8046a3d461e4d22c5a0"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6043383
+project-id = 1162239

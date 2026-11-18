@@ -1,0 +1,13 @@
+name = "TFMG Liquid Train Fuels"
+filename = "tfmg_rail_fuels_datapack_1.21.1.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e5a1cda6b4e51d7e3479ef334461c14ae3883636"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7974833
+project-id = 1523129
