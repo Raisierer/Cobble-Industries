@@ -3,11 +3,11 @@ filename = "playerxp-neoforge-1.1.2+1.21.1.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "4eca5620c7f21e44271e985080da9334426b2120"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/zlrbPCvu/versions/TnGS5djO/playerxp-neoforge-1.1.2%2B1.21.1.jar"
+hash-format = "sha512"
+hash = "83fb086d88456448445f82cab6fb182e50d5fd78298bd54ccf880d4baa3d3df4cfbef807dd3e5f130a94e32713143a05a19886ae332d1c2bc03673760dba2dc6"
 
 [update]
-[update.curseforge]
-file-id = 8845460
-project-id = 1261726
+[update.modrinth]
+mod-id = "zlrbPCvu"
+version = "TnGS5djO"
