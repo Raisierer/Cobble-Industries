@@ -7950,6 +7950,11 @@ hash = "a101c2420eb4b76979f3fcb1e3cca971ae38a57e6da1eb3c9ea5d38a64f1081b"
 metafile = true
 
 [[files]]
+file = "datapacks/complete-cobblemon-collection.pw.toml"
+hash = "b5d1af68cec124184969b9263779a4d55c8f7da9ed72f0ddc556b18101c63e86"
+metafile = true
+
+[[files]]
 file = "datapacks/dojo_loot_fix_v2.zip"
 hash = "9bc338fce45dde605f9bef741d335ec4a6fc144af63cb9d3794c7c793a944681"
 
@@ -8978,7 +8983,7 @@ metafile = true
 
 [[files]]
 file = "mods/metal-upscaler.pw.toml"
-hash = "b25a13c9af6f440d9e76f8d3e91a910313ab0f93c0706434f0b12617fa56211f"
+hash = "8a592177102588c7f6dc76a939f4700e8b794a3bde87d4bf3c40347fcedcc3ec"
 metafile = true
 
 [[files]]
@@ -9423,11 +9428,6 @@ hash = "b217a8f9c41cdf9f4b2790b7a0175dc231ac20af102c7515daee1a82c69d4aa1"
 [[files]]
 file = "resourcepacks/cobblemon-anime-poke-ball-sfx-pack.pw.toml"
 hash = "4e70fce67b695037ba24185f763f5faa0f1d9e4ef729fc31a21b9a35097b8e45"
-metafile = true
-
-[[files]]
-file = "resourcepacks/complete-cobblemon-collection.pw.toml"
-hash = "9632f6e81d4b654370c514eb32e26f13f3e29c83341ba3404efd9f76e537989a"
 metafile = true
 
 [[files]]

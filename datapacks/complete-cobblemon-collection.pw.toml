@@ -1,0 +1,13 @@
+name = "Complete Cobblemon Collection"
+filename = "CCC_1.8.4.zip"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/qoL4kNxC/versions/lnsJl8XN/CCC_1.8.4.zip"
+hash-format = "sha512"
+hash = "fceaffa9fd2b44946efb240ecc969865af7d50020e92ac2f55e90428a2e1ab9a3aed59648e4aa4a00dc8d27e4f1f36cf734a80814fcdf410aa5d9d9d156644b1"
+
+[update]
+[update.modrinth]
+mod-id = "qoL4kNxC"
+version = "lnsJl8XN"
