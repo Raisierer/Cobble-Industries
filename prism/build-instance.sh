@@ -2,12 +2,14 @@
 # Builds a Prism Launcher instance zip that installs/updates the pack via packwiz
 # on every launch. Players import it with: Prism -> Add Instance -> Import -> zip.
 #
-# usage: prism/build-instance.sh [pack.toml URL]
+# usage: prism/build-instance.sh [pack.toml URL] [output zip]
+# Default URL is the `release` branch, which CI moves to every stable tag, so
+# instances follow new releases automatically.
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-PACK_URL="${1:-https://raw.githubusercontent.com/Raisierer/Cobble-Industries/main/pack.toml}"
-OUT="$REPO_ROOT/build/Cobble-Industries-prism.zip"
+PACK_URL="${1:-https://raw.githubusercontent.com/Raisierer/Cobble-Industries/release/pack.toml}"
+OUT="$(realpath -m "${2:-$REPO_ROOT/build/Cobble-Industries-prism.zip}")"
 
 # Read Minecraft/NeoForge versions from pack.toml so the instance always matches the pack.
 MC_VERSION=$(sed -n 's/^minecraft = "\(.*\)"/\1/p' "$REPO_ROOT/pack.toml")

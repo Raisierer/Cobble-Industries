@@ -16,10 +16,11 @@ services:
       SERVER_PORT: "${GAME_PORT:-25565}"   # written to server.properties
       TYPE: NEOFORGE
       VERSION: "1.21.1"
-      NEOFORGE_VERSION: "21.1.265"   # keep in sync with pack.toml [versions]
+      NEOFORGE_VERSION: "${NEOFORGE_VERSION:?set NEOFORGE_VERSION in server/.env}"   # must match pack.toml of PACK_VERSION
       # packwiz-installer runs on every start and syncs only side=server/both files.
-      # Point at a tag (e.g. /v0.56/) for reproducible servers, or /main/ to track latest.
-      PACKWIZ_URL: "https://raw.githubusercontent.com/Raisierer/Cobble-Industries/main/pack.toml"
+      # PACK_VERSION is a release tag (e.g. v0.58.0) for a pinned, reproducible server;
+      # "release" follows the latest stable release, "main" tracks development.
+      PACKWIZ_URL: "https://raw.githubusercontent.com/Raisierer/Cobble-Industries/${PACK_VERSION:?set PACK_VERSION in server/.env}/pack.toml"
       MEMORY: "${MEMORY:-12G}"
       # On OOM: write a heap dump (to find the culprit) and exit, so Docker restarts a clean
       # process instead of leaving a half-dead server running.

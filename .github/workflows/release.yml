@@ -1,0 +1,126 @@
+name: Release
+
+# Push a semver tag (v1.2.3, or v1.2.3-beta.1 for a pre-release) to publish:
+#   - GitHub release with the Prism instance zip and the CurseForge zip
+#   - stable tags also move the `release` branch, which Prism instances and
+#     servers following the latest release read from
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+      - "v[0-9]+.[0-9]+.[0-9]+-*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+env:
+  # Same packwiz revision as devenv (nixpkgs packwiz-0-unstable-2026-10-14)
+  PACKWIZ_REV: 170b22d785959dda5876b54b7f16e1b807a57fb6
+  REPO_RAW: https://raw.githubusercontent.com/${{ github.repository }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # changelog needs the previous tag
+
+      - name: Read version
+        id: v
+        run: |
+          TAG=${GITHUB_REF_NAME}
+          VERSION=${TAG#v}
+          PACK_VERSION=$(sed -n 's/^version = "\(.*\)"/\1/p' pack.toml)
+          if [ "$PACK_VERSION" != "$VERSION" ]; then
+            echo "::error file=pack.toml::pack.toml version is '$PACK_VERSION' but tag is '$TAG'. Run tools/release.sh $VERSION first."
+            exit 1
+          fi
+          PRERELEASE=false; [[ $VERSION == *-* ]] && PRERELEASE=true
+          {
+            echo "tag=$TAG"
+            echo "version=$VERSION"
+            echo "prerelease=$PRERELEASE"
+            echo "name=$(sed -n 's/^name = "\(.*\)"/\1/p' pack.toml)"
+            echo "minecraft=$(sed -n 's/^minecraft = "\(.*\)"/\1/p' pack.toml)"
+            echo "neoforge=$(sed -n 's/^neoforge = "\(.*\)"/\1/p' pack.toml)"
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache: false
+
+      - name: Install packwiz
+        run: |
+          go install github.com/packwiz/packwiz@${PACKWIZ_REV}
+          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+
+      - name: Check index is up to date
+        run: |
+          tools/refresh.sh
+          if ! git diff --quiet -- index.toml pack.toml; then
+            git diff --stat -- index.toml pack.toml
+            echo "::error::index.toml is stale. Run tools/refresh.sh, commit and re-tag."
+            exit 1
+          fi
+
+      - name: Build CurseForge zip
+        run: |
+          mkdir -p build
+          packwiz -y curseforge export -o "build/Cobble-Industries-${{ steps.v.outputs.version }}-curseforge.zip"
+
+      - name: Build Prism zip
+        run: |
+          # Stable releases follow the `release` branch (auto-update to newer releases);
+          # pre-releases stay pinned to their own tag.
+          if [ "${{ steps.v.outputs.prerelease }}" = true ]; then REF=${{ steps.v.outputs.tag }}; else REF=release; fi
+          prism/build-instance.sh "$REPO_RAW/$REF/pack.toml" \
+            "build/Cobble-Industries-${{ steps.v.outputs.version }}-prism.zip"
+
+      - name: Write release notes
+        run: |
+          TAG=${{ steps.v.outputs.tag }}
+          PREV=$(git describe --tags --abbrev=0 --match 'v[0-9]*' "$TAG^" 2>/dev/null || true)
+          {
+            echo "**Minecraft ${{ steps.v.outputs.minecraft }} · NeoForge ${{ steps.v.outputs.neoforge }}**"
+            echo
+            echo "## Install"
+            echo "- **Prism Launcher (recommended):** Add Instance → Import → \`Cobble-Industries-${{ steps.v.outputs.version }}-prism.zip\`."
+            echo "  The instance updates itself on every launch; your settings (options, keybinds, client configs, shader settings) are kept."
+            echo "  First launch only: put \`smallcolonies 1.21.1 v1.8.jar\` from CurseForge into the instance's \`.minecraft/mods\` folder."
+            echo "- **CurseForge app:** Create Custom Profile → Import → \`Cobble-Industries-${{ steps.v.outputs.version }}-curseforge.zip\`. No auto-update; import the new zip for each release."
+            echo
+            echo "## Server"
+            echo '```sh'
+            echo "# server/.env"
+            echo "PACK_VERSION=$TAG"
+            echo "NEOFORGE_VERSION=${{ steps.v.outputs.neoforge }}"
+            echo '```'
+            echo "Then \`docker compose up -d\` (restart to apply)."
+            echo
+            if [ -n "$PREV" ]; then
+              echo "## Changes since $PREV"
+              tools/changelog.sh "$PREV" "$TAG"
+              echo
+            fi
+          } > build/notes.md
+          cat build/notes.md
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          args=()
+          [ "${{ steps.v.outputs.prerelease }}" = true ] && args+=(--prerelease) || args+=(--latest)
+          gh release create "${{ steps.v.outputs.tag }}" build/*.zip \
+            --title "${{ steps.v.outputs.name }} ${{ steps.v.outputs.version }}" \
+            --notes-file build/notes.md --generate-notes "${args[@]}"
+
+      - name: Move release branch
+        if: steps.v.outputs.prerelease == 'false'
+        run: git push --force origin "$(git rev-parse "${GITHUB_REF_NAME}^{commit}"):refs/heads/release"
