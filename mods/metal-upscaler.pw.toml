@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 9049617
 project-id = 1669444
+
+[option]
+optional = true
+default = false
+description = "Upscaling/frame generation via DLSS, FSR or MetalFX. Must be downloaded manually from CurseForge."

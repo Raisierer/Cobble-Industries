@@ -20,7 +20,10 @@ services:
       # packwiz-installer runs on every start and syncs only side=server/both files.
       # Point at a tag (e.g. /v0.56/) for reproducible servers, or /main/ to track latest.
       PACKWIZ_URL: "https://raw.githubusercontent.com/Raisierer/Cobble-Industries/main/pack.toml"
-      MEMORY: "10G"
+      MEMORY: "${MEMORY:-12G}"
+      # On OOM: write a heap dump (to find the culprit) and exit, so Docker restarts a clean
+      # process instead of leaving a half-dead server running.
+      JVM_XX_OPTS: "-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/data/heapdumps -XX:+ExitOnOutOfMemoryError"
       USE_AIKAR_FLAGS: "true"
       MOTD: "Cobble Industries"
       DIFFICULTY: normal

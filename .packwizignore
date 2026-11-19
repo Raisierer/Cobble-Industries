@@ -10,6 +10,8 @@ devenv.local.*
 README.md
 .github/
 server/
+prism/
+tools/
 
 # Build outputs (exported packs at the repo root)
 /*.zip
@@ -19,3 +21,10 @@ server/
 # Stale config backups written by NeoForge
 *.bak
 *.bak.*
+
+# Local runtime data that must not ship to players
+config/jei/world/
+config/spark/tmp/
+config/spark/tmp-client/
+config/worldedit/.archive-unpack/
+config/structurify/structurify_backup_*.json
