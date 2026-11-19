@@ -32,6 +32,8 @@ EOF
 
 # PreLaunchCommand runs in the instance's .minecraft folder. packwiz-installer also
 # updates mmc-pack.json when the pack's NeoForge version changes.
+# Qt INI format: the whole value is quoted and inner quotes escaped, otherwise Prism
+# strips the quotes and the space ("javaw.exe-jar ...") and the command fails.
 cat > "$INST/instance.cfg" <<EOF
 [General]
 ConfigVersion=1.2
@@ -39,7 +41,7 @@ InstanceType=OneSix
 name=Cobble Industries
 iconKey=default
 OverrideCommands=true
-PreLaunchCommand="\$INST_JAVA" -jar packwiz-installer-bootstrap.jar $PACK_URL
+PreLaunchCommand="\\"\$INST_JAVA\\" -jar packwiz-installer-bootstrap.jar $PACK_URL"
 OverrideMemory=true
 MinMemAlloc=4096
 MaxMemAlloc=12288
