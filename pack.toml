@@ -1,11 +1,11 @@
 name = "Cobble-Industries-Colonies"
-version = "0.58.2"
+version = "0.58.3"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "e1b22276260ef91c451b5c7483d181e361d2182608634c030e0fad88ca2878cd"
+hash = "a8bd7ad10ad27bdc606d4a3714a5cf0385a99348c55a76cba49e89797742e9fc"
 
 [versions]
 minecraft = "1.21.1"
