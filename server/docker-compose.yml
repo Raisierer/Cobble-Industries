@@ -11,6 +11,9 @@ services:
       # clients about it, so a remap like "25570:25565" would point clients at the wrong port.
       - "${GAME_PORT:-25565}:${GAME_PORT:-25565}"
       - "${LOD_PORT:-25566}:${LOD_PORT:-25566}"   # Chunksmith LOD backchannel (HTTP)
+      # BlueMap web map (port set in data/config/bluemap/webserver.conf, default 8100).
+      # Bound to localhost by default; set BLUEMAP_BIND=0.0.0.0 to expose it directly.
+      - "${BLUEMAP_BIND:-127.0.0.1}:${BLUEMAP_PORT:-8100}:8100"
     environment:
       EULA: "TRUE"
       SERVER_PORT: "${GAME_PORT:-25565}"   # written to server.properties

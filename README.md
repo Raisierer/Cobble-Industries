@@ -85,6 +85,14 @@ docker compose logs -f
 
 **SmallColonies** must also be placed by hand in `server/data/mods/`.
 
+### Web map (BlueMap)
+BlueMap is a server-only mod, so players don't download it. After the first start:
+1. In `server/data/config/bluemap/core.conf` set `accept-download: true` (BlueMap downloads the vanilla client jar for textures; this accepts Mojang's EULA). This file isn't part of the pack, so packwiz never overwrites your edits.
+2. Restart (`docker compose restart`) or run `bluemap reload` in the console. Rendering starts on its own; check progress with `/bluemap`.
+3. Open `http://<server>:8100`. The port is bound to `127.0.0.1` by default so you can put a reverse proxy (Caddy, nginx) with HTTPS in front. To expose it directly instead, set `BLUEMAP_BIND=0.0.0.0` in `.env`.
+
+Map configs (one per dimension) are in `server/data/config/bluemap/maps/`, rendered tiles in `server/data/bluemap/`. A full render of a large world takes a while and uses CPU; `/bluemap freeze <map>` pauses a map.
+
 ---
 
 ## Maintaining the pack
